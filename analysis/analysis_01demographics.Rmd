@@ -129,3 +129,88 @@ p <- ggplot(df, aes(x=auth_contact_you, y=n, fill=auth_contact_you)) +
 ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/auth_contact_you.pdf")
 print(p)
 ```
+
+```{r, fig.width = 6, fig.height = 3}
+acateg <- 'xp_artif_share'
+hwidth  <- 6
+hheight <- 3
+hy     <-  0.3
+hvjust <- -0.5 
+
+mean_val <- mean(f_csv[,acateg])
+adf <- as.data.frame(table(f_csv[,acateg])) %>%
+    arrange(Freq)
+likscale <- 1:7
+adf[,'Var1'] <- factor(adf[,'Var1'], levels = likscale)
+adf <- rbind(adf, data.frame(
+  Var1 = likscale[!(likscale %in% adf[,'Var1'])], 
+  Freq = rep(0, sum(!(likscale %in% adf[,'Var1']))))
+  )
+
+
+colnames(adf) <- c(acateg,'n')
+
+# Histogram with density plot
+p <- ggplot(adf, aes_string(x=acateg,'n')) +
+  geom_bar(stat = 'identity', colour="black", fill="white")+
+  geom_vline(aes(xintercept=mean_val), # Add mean line
+            color="red", linetype="dashed")+
+  geom_text(aes(label = n), 
+         vjust = -0.2, position = position_dodge(width = 0.5),size = 2) +
+  scale_x_discrete(drop = FALSE)+
+  labs(x = 'Experience score', 
+     y = 'Frequency', 
+     title ='How  would  you  rate  your  experience with artifact sharing?'
+     )+
+  theme(plot.title = element_text(hjust = 0.5, size = 8),
+        axis.title.x = element_text(hjust = 0.5, size = 8),
+        axis.title.y = element_text(hjust = 0.5, size = 8)
+        )
+ggsave(plot = p, width = hwidth, height = hheight, dpi = 300,
+       filename = paste('./img/experience_',acateg,".pdf",sep=''))
+print(p)
+  
+
+```
+
+```{r, fig.width = 6, fig.height = 3}
+acateg <- 'xp_artif_reuse'
+hwidth  <- 6
+hheight <- 3
+hy     <-  0.3
+hvjust <- -0.5 
+
+mean_val <- mean(f_csv[,acateg])
+adf <- as.data.frame(table(f_csv[,acateg])) %>%
+    arrange(Freq)
+likscale <- 1:7
+adf[,'Var1'] <- factor(adf[,'Var1'], levels = likscale)
+adf <- rbind(adf, data.frame(
+  Var1 = likscale[!(likscale %in% adf[,'Var1'])], 
+  Freq = rep(0, sum(!(likscale %in% adf[,'Var1']))))
+  )
+
+
+colnames(adf) <- c(acateg,'n')
+
+# Histogram with density plot
+p <- ggplot(adf, aes_string(x=acateg,'n')) +
+  geom_bar(stat = 'identity', colour="black", fill="white")+
+  geom_vline(aes(xintercept=mean_val), # Add mean line
+            color="red", linetype="dashed")+
+  geom_text(aes(label = n), 
+         vjust = -0.2, position = position_dodge(width = 0.5),size = 2) +
+  scale_x_discrete(drop = FALSE)+
+  labs(x = 'Experience score', 
+       y = 'Frequency', 
+       title ='How  would  you  rate  your  experience in reusing  MDE research artifacts?'
+       )+
+  theme(plot.title = element_text(hjust = 0.5, size = 8),
+        axis.title.x = element_text(hjust = 0.5, size = 8),
+        axis.title.y = element_text(hjust = 0.5, size = 8)
+        )
+ggsave(plot = p, width = hwidth, height = hheight, dpi = 300,
+       filename = paste('./img/experience_',acateg,".pdf",sep=''))
+print(p)
+
+```

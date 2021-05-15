@@ -24,6 +24,9 @@ f_chall <-f_chall %>%
   mutate(Challenge = paste('C',Rank,') ',Challenge,sep='')) %>%
   mutate(Challenge = str_wrap(Challenge, width = 21)) 
 
+```
+
+```{r, fig.width = 8, fig.height = 6}
 
 p <- ggplot(f_chall, aes(x=reorder(Challenge,-Rank),y=Frequency)) +
   geom_bar(stat = 'identity', colour="black", fill="white")+

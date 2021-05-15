@@ -58,6 +58,7 @@ print(p)
 
 
 ```{r, fig.width = 6, fig.height = 3}
+
 plot_params <- data.frame(
     acateg  = c('what', 'when', 'why', 'where', 'how', 'who', 'howmuch'),
     awidth  = c(12,     12,     12,    12,       12,    12,     12),
