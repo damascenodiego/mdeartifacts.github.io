@@ -1,0 +1,44 @@
+---
+title: "R Notebook - Quality Management Guidelines for MDE Research Artifacts"
+output: html_notebook
+---
+
+<!-- This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.  -->
+
+<!-- Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.  -->
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+options(digits=2)
+
+source('./utils.R')
+
+# load the csv file
+file_chall = '../data/04_guidelines_survey/practices4mde_05challenges_3Grouping.csv'
+awidth <- 8; aheight <- 6
+
+f_chall = read.csv(file_chall, header=TRUE)
+names(f_chall) <- c("Rank", "Challenge","Frequency")
+f_chall$Rank <- as.integer(f_chall$Rank)
+f_chall <-f_chall %>% 
+  na.omit() %>%
+  mutate(Challenge = paste('C',Rank,') ',Challenge,sep='')) %>%
+  mutate(Challenge = str_wrap(Challenge, width = 21)) 
+
+
+p <- ggplot(f_chall, aes(x=reorder(Challenge,-Rank),y=Frequency)) +
+  geom_bar(stat = 'identity', colour="black", fill="white")+
+  geom_text(aes(label = Frequency), 
+            hjust = -.50, position = position_dodge(width = 0.5),size = 3) +
+  scale_x_discrete(drop = FALSE)+
+  labs(x = 'Challenges in artifact sharing', 
+       y = 'Frequency', 
+       title = 'What are the top 10  challenges faced by MDE experts?')+
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(plot.title = element_text(hjust = 0.5, size = 8),
+        axis.title.x = element_text(hjust = 0.5, size = 8),
+        axis.title.y = element_blank())
+  ggsave(plot = p, width = awidth, height = aheight, dpi = 300,
+         filename = './img/challenges_frequency.pdf')
+  print(p)
+```

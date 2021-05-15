@@ -1,0 +1,86 @@
+---
+title: "R Notebook - Quality Management Guidelines for MDE Research Artifacts"
+output: html_notebook
+---
+
+<!-- This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.  -->
+
+<!-- Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.  -->
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+options(digits=2)
+
+source('./utils.R')
+
+# load the csv file
+file = '../data/04_guidelines_survey/practices4mde_04survey.csv'
+f_csv = read.csv(file, header=TRUE)
+
+# load columns with shorter identifier
+survey_dict <- survey_identifiers()
+names(f_csv) <- names(survey_dict)
+
+```
+
+```{r, fig.width = 10, fig.height = 2}
+acateg  <- 'all'
+awidth <- 12; aheight <- 40
+hwidth <- 5; hheight <- 3; hy <- 0.0275; hvjust <- 1.5;
+
+items <- f_csv[,grepl("^[wh].*[^g]$", colnames(f_csv))]
+
+names(items) <- survey_dict[names(items)]
+for(i in seq_along(items))items[,i] <- factor(items[,i], levels=survey_levels)
+
+lgr <- likert(items)
+all_df <- lgr$results
+matching <- str_match(all_df$Item, "^(.+) \\[(.+)\\]$")
+all_df["ID"] <- sapply(matching[,1], function(x) names(survey_dict[match(x, survey_dict)]))
+matching_id <- str_match(all_df[,"ID"], "^(.+)_(.+)_(.+)$")
+
+all_df["Perspective"] <- matching_id[,2]
+all_df["Item"] <- str_replace(all_df[,"Item"], "\\).*","")
+
+data_long <- melt(all_df,id.vars=c("Item","Perspective"), measure.vars=c("Essential","Desirable","Unnecessary"))
+data_long$variable <- factor(data_long$variable, levels=c("Essential","Desirable","Unnecessary"))
+data_long$Perspective <- str_replace(data_long$Perspective,"howmuch","how many")
+data_long$Perspective <- str_to_sentence(data_long$Perspective)
+data_long$Perspective <- factor(data_long$Perspective, levels=c("What","Why","Where","Who","When","How","How many"))
+
+p <- ggplot(data_long,aes(x = Item, y = value))+
+  geom_boxplot(aes(fill=variable))+
+  scale_fill_brewer(palette = "Pastel1", direction = -1) +
+  labs(x = 'Factual Question', y = '% of practices', fill = "Priority")
+pdf_file <- './img/priority_boxplot.pdf'
+ggsave(plot = p, width = 16, height = 2, dpi = 300,filename = pdf_file)
+print(p)
+
+```
+
+```{r, fig.width = 12, fig.height = 40}
+
+summ <- summary(lgr)
+
+# save plot for all practices
+p <- plot(lgr, wrap= 80, centered = FALSE)
+ggsave(plot = p, width = awidth, height = aheight, dpi = 300, 
+     filename = paste('./img/likert_',acateg,".pdf",sep=''))
+print(p)
+
+```
+
+```{r, fig.width = 5, fig.height = 3}
+# Histogram with density plot
+p <- ggplot(summ, aes(x=high)) +
+  geom_histogram(aes(y=..density..), colour="black", fill="white", bins = 30)+
+  geom_vline(aes(xintercept=mean(high)), # Add mean line
+            color="red", linetype="dashed", size=1)+
+  geom_text(aes(x=mean(high), label=sprintf("μ=%s", round(mean(high))),
+                y=hy, vjust = hvjust),
+            colour="red", angle=90)+
+  labs(x = 'Percentage', y = 'Frequency')
+ggsave(plot = p, width = hwidth, height = hheight, dpi = 300,
+       filename = paste('./img/likert_',acateg,"_hist.pdf",sep=''))
+print(p)
+
+```

@@ -1,0 +1,131 @@
+---
+title: "R Notebook - Quality Management Guidelines for MDE Research Artifacts"
+output: html_notebook
+---
+
+<!-- This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.  -->
+
+<!-- Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.  -->
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+options(digits=2)
+
+source('./utils.R')
+
+# load the csv file
+file = '../data/04_guidelines_survey/practices4mde_04survey.csv'
+f_csv = read.csv(file, header=TRUE)
+
+# load columns with shorter identifier
+survey_dict <- survey_identifiers()
+names(f_csv) <- names(survey_dict)
+
+```
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, demo_gender) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n)))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=demo_gender, y=n, fill=demo_gender)) +
+  geom_bar(stat="identity", width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25, 
+           position = position_dodge(width = 0.5),
+           size = 2
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['demo_gender'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/demo_gender.pdf")
+print(p)
+```
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, demo_role) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  mutate(demo_role = str_replace(demo_role," level","")) %>%
+  mutate(demo_role = str_replace(demo_role," researcher","")) %>%
+  mutate(demo_role = str_to_title(demo_role))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=reorder(demo_role,n), y=n, fill=demo_role)) +
+  geom_bar(stat = 'identity' ,width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25,
+           position = position_dodge(width = 0.5),
+           size = 1.5
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['demo_role'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/demo_role.pdf")
+print(p)
+```
+
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, auth_you_contact) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n)))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=auth_you_contact, y=n, fill=auth_you_contact)) +
+  geom_bar(stat="identity", width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25, 
+           position = position_dodge(width = 0.5),
+           size = 2
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['auth_you_contact'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/auth_you_contact.pdf")
+print(p)
+```
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, auth_contact_you) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n)))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=auth_contact_you, y=n, fill=auth_contact_you)) +
+  geom_bar(stat="identity", width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25, 
+           position = position_dodge(width = 0.5),
+           size = 2
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['auth_contact_you'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/auth_contact_you.pdf")
+print(p)
+```

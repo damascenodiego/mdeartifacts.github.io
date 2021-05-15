@@ -1,0 +1,493 @@
+---
+title: "R Notebook - Quality Management Guidelines for MDE Research Artifacts"
+output: html_notebook
+---
+
+<!-- This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code.  -->
+
+<!-- Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.  -->
+
+```{r, echo=FALSE, message=FALSE, results='hide'}
+options(digits=2)
+
+source('./utils.R')
+
+# load the csv file
+file = '../data/04_guidelines_survey/practices4mde_04survey.csv'
+f_csv = read.csv(file, header=TRUE)
+
+# load columns with shorter identifier
+survey_dict <- survey_identifiers()
+names(f_csv) <- names(survey_dict)
+
+```
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, demo_gender) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n)))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=demo_gender, y=n, fill=demo_gender)) +
+  geom_bar(stat="identity", width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25, 
+           position = position_dodge(width = 0.5),
+           size = 2
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['demo_gender'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/demo_gender.pdf")
+print(p)
+```
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, demo_role) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n))) %>%
+  mutate(demo_role = str_replace(demo_role," level","")) %>%
+  mutate(demo_role = str_replace(demo_role," researcher","")) %>%
+  mutate(demo_role = str_to_title(demo_role))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=reorder(demo_role,n), y=n, fill=demo_role)) +
+  geom_bar(stat = 'identity' ,width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25,
+           position = position_dodge(width = 0.5),
+           size = 1.5
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['demo_role'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/demo_role.pdf")
+print(p)
+```
+
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, auth_you_contact) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n)))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=auth_you_contact, y=n, fill=auth_you_contact)) +
+  geom_bar(stat="identity", width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25, 
+           position = position_dodge(width = 0.5),
+           size = 2
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['auth_you_contact'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/auth_you_contact.pdf")
+print(p)
+```
+
+```{r, fig.width = 4, fig.height = 1}
+df <- count(f_csv, auth_contact_you) %>%
+  arrange(n) %>%
+  mutate(prop = percent(n / sum(n)))
+
+# Plot basic piechart
+p <- ggplot(df, aes(x=auth_contact_you, y=n, fill=auth_contact_you)) +
+  geom_bar(stat="identity", width=1, position="dodge")+
+  geom_text(aes(label = n), 
+           hjust = -0.25, 
+           position = position_dodge(width = 0.5),
+           size = 2
+           ) +
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(legend.position = "none",
+        plot.title = element_text(hjust = 0.5, size = 6),
+        axis.title.x = element_text(hjust = 0.5, size = 5),
+        axis.title.y = element_text(hjust = 0.5, size = 5),
+        axis.text = element_text(hjust = 0.5, size = 4)
+        )+
+  labs(title=survey_dict['auth_contact_you'], x = NULL, y = "Number of participants")
+ggsave(plot = p, width = 4, height = 1, dpi = 300, filename = "./img/auth_contact_you.pdf")
+print(p)
+```
+
+```{r, fig.width = 6, fig.height = 3}
+acateg <- 'xp_artif_share'
+hwidth  <- 10
+hheight <- 10
+hy     <-  0.3
+hvjust <- -0.5 
+
+mean_val <- mean(f_csv[,acateg])
+adf <- as.data.frame(table(f_csv[,acateg])) %>%
+    arrange(Freq)
+likscale <- 1:7
+adf[,'Var1'] <- factor(adf[,'Var1'], levels = likscale)
+adf <- rbind(adf, data.frame(
+  Var1 = likscale[!(likscale %in% adf[,'Var1'])], 
+  Freq = rep(0, sum(!(likscale %in% adf[,'Var1']))))
+  )
+
+
+colnames(adf) <- c(acateg,'n')
+
+# Histogram with density plot
+p <- ggplot(adf, aes_string(x=acateg,'n')) +
+  geom_bar(stat = 'identity', colour="black", fill="white")+
+  geom_vline(aes(xintercept=mean_val), # Add mean line
+            color="red", linetype="dashed")+
+  geom_text(aes(label = n), 
+         vjust = -0.2, position = position_dodge(width = 0.5),size = 2) +
+  scale_x_discrete(drop = FALSE)+
+  labs(x = 'Experience score', 
+     y = 'Frequency', 
+     title ='How  would  you  rate  your  experience with artifact sharing?'
+     )+
+  theme(plot.title = element_text(hjust = 0.5, size = 8),
+        axis.title.x = element_text(hjust = 0.5, size = 8),
+        axis.title.y = element_text(hjust = 0.5, size = 8)
+        )
+ggsave(plot = p, width = awidth, height = aheight, dpi = 300,
+       filename = paste('./img/experience_',acateg,".pdf",sep=''))
+print(p)
+  
+
+```
+
+```{r, fig.width = 7, fig.height = 3}
+acateg <- 'xp_artif_reuse'
+hwidth  <- 10
+hheight <- 10
+hy     <-  0.3
+hvjust <- -0.5 
+
+mean_val <- mean(f_csv[,acateg])
+adf <- as.data.frame(table(f_csv[,acateg])) %>%
+    arrange(Freq)
+likscale <- 1:7
+adf[,'Var1'] <- factor(adf[,'Var1'], levels = likscale)
+adf <- rbind(adf, data.frame(
+  Var1 = likscale[!(likscale %in% adf[,'Var1'])], 
+  Freq = rep(0, sum(!(likscale %in% adf[,'Var1']))))
+  )
+
+
+colnames(adf) <- c(acateg,'n')
+
+# Histogram with density plot
+p <- ggplot(adf, aes_string(x=acateg,'n')) +
+  geom_bar(stat = 'identity', colour="black", fill="white")+
+  geom_vline(aes(xintercept=mean_val), # Add mean line
+            color="red", linetype="dashed")+
+  geom_text(aes(label = n), 
+         vjust = -0.2, position = position_dodge(width = 0.5),size = 2) +
+  scale_x_discrete(drop = FALSE)+
+  labs(x = 'Experience score', 
+       y = 'Frequency', 
+       title ='How  would  you  rate  your  experience in reusing  MDE research artifacts?'
+       )+
+  theme(plot.title = element_text(hjust = 0.5, size = 8),
+        axis.title.x = element_text(hjust = 0.5, size = 8),
+        axis.title.y = element_text(hjust = 0.5, size = 8)
+        )
+ggsave(plot = p, width = awidth, height = aheight, dpi = 300,
+       filename = paste('./img/experience_',acateg,".pdf",sep=''))
+print(p)
+
+```
+
+
+```{r}
+acateg  <- 'all'
+awidth <- 12; aheight <- 40
+hwidth <- 5; hheight <- 3; hy <- 0.0275; hvjust <- 1.5;
+twidth <- 9; theight <- 20
+
+items <- f_csv[,grepl("^[wh].*[^g]$", colnames(f_csv))]
+
+names(items) <- survey_dict[names(items)]
+for(i in seq_along(items))items[,i] <- factor(items[,i], levels=survey_levels)
+
+lgr <- likert(items)
+all_df <- lgr$results
+matching <- str_match(all_df$Item, "^(.+) \\[(.+)\\]$")
+all_df["ID"] <- sapply(matching[,1], function(x) names(survey_dict[match(x, survey_dict)]))
+matching_id <- str_match(all_df[,"ID"], "^(.+)_(.+)_(.+)$")
+
+all_df["Perspective"] <- matching_id[,2]
+all_df["Item"] <- str_replace(all_df[,"Item"], "\\).*","")
+
+data_long <- melt(all_df,id.vars=c("Item","Perspective"), measure.vars=c("Essential","Desirable","Unnecessary"))
+data_long$variable <- factor(data_long$variable, levels=c("Essential","Desirable","Unnecessary"))
+data_long$Perspective <- str_replace(data_long$Perspective,"howmuch","how many")
+data_long$Perspective <- str_to_sentence(data_long$Perspective)
+data_long$Perspective <- factor(data_long$Perspective, levels=c("What","Why","Where","Who","When","How","How many"))
+
+p <- ggplot(data_long,aes(x = Item, y = value))+
+  geom_boxplot(aes(fill=variable))+
+  scale_fill_brewer(palette = "Pastel1", direction = -1) +
+  labs(x = 'Factual Question', y = '% of practices', fill = "Priority")
+pdf_file <- './img/priority_boxplot.pdf'
+ggsave(plot = p, width = 16, height = 2, dpi = 300,filename = pdf_file)
+print(p)
+
+summ <- summary(lgr)
+above_mean <- summ$high >= 50
+top_lgr <- likert(items[,summ[above_mean,"Item"]])
+
+print("Top priority practices (classified as 'Essential' by over 50%)")
+print(summary(above_mean))
+print(sort(summ[above_mean,"Item"]))
+
+top_df <- top_lgr$results
+matching <- str_match(top_df$Item, "^(.+) \\[(.+)\\]$")
+top_df["ID"] <- sapply(matching[,1], function(x) names(survey_dict[match(x, survey_dict)]))
+matching_id <- str_match(top_df[,"ID"], "^(.+)_(.+)_(.+)$")
+
+top_df["Perspective"] <- matching_id[,2]
+top_df["QuestionID"] <- matching_id[,3]
+top_df["PracticeID"] <- matching_id[,4]
+top_df["Question"] <- matching[,2]
+top_df["Practice"] <- matching[,3]
+top_df <- top_df %>% arrange(desc(top_df$Perspective), desc(top_df$Question), desc(top_df$Practice))
+
+top_df<-top_df[,c(5:10,1:4)]
+write.table(top_df, file="./top_priority.csv", sep = ",", row.names = FALSE)
+top_tex <- top_df[,c("Perspective","Question","Practice","ID")]
+top_tex$ID<-paste('\\raisebox{-.5\\height}{\\includegraphics[width=0.4\\textwidth]{img/likert/priority_',
+                  top_tex$ID,'.pdf}}',sep='')
+write.table(top_tex, file="./top_priority.tex", col.names = FALSE,
+            sep = " & ", quote = FALSE, eol = "\\\\\\hline\n")
+
+top_data <- top_df[,c("ID","Perspective","QuestionID","PracticeID","Unnecessary","Desirable","Essential")]
+
+for(row in 1:nrow(top_data)){
+  a_row <-  top_data[row,]
+  
+  a_df <- data.frame(
+   Priority   = c("Unnecessary","Desirable","Essential"), 
+   Percentage = c(a_row$Unnecessary, a_row$Desirable, a_row$Essential)
+   )
+  
+  a_df$Priority <- factor(a_df$Priority, levels=c("Unnecessary","Desirable","Essential"))
+  p <- ggplot(a_df, aes(x = Percentage, y = '', fill = Priority)) +
+    geom_bar(stat="identity", width = 0.2) + 
+    geom_text(aes(label = paste(format(Percentage, nsmall=1), "%", sep="")), 
+              position = position_stack(vjust= 0.5),
+              colour = "black", size = 4) +
+    theme_void() + 
+    scale_x_continuous(expand = c(.02, .02)) +
+    scale_y_discrete(expand = c(0, 0)) +
+    scale_fill_brewer(palette = "Pastel1", direction = 1) +
+    # scale_fill_manual(values=c("#BBBBBB", "#E69F00", "#46fc05"))+
+    theme(legend.position = "none")
+  pdf_file <- paste('./img/priority_',a_row$ID,".pdf",sep='')
+  ggsave(plot = p, width = 8, height = .5, dpi = 300,filename = pdf_file)
+}
+
+
+```
+
+```{r, fig.width = 9, fig.height = 40}
+
+# save plot for all practices
+p <- plot(lgr, wrap= 80, centered = FALSE)
+ggsave(plot = p, width = awidth, height = aheight, dpi = 300, 
+     filename = paste('./img/likert_',acateg,".pdf",sep=''))
+print(p)
+
+```
+
+```{r, fig.width = 9, fig.height = 3}
+# Histogram with density plot
+p <- ggplot(summ, aes(x=high)) +
+  geom_histogram(aes(y=..density..), colour="black", fill="white", bins = 30)+
+  geom_vline(aes(xintercept=mean(high)), # Add mean line
+            color="red", linetype="dashed", size=1)+
+  geom_text(aes(x=mean(high), label=sprintf("μ=%s", round(mean(high))),
+                y=hy, vjust = hvjust),
+            colour="red", angle=90)+
+  labs(x = 'Percentage', y = 'Frequency')
+ggsave(plot = p, width = hwidth, height = hheight, dpi = 300,
+       filename = paste('./img/likert_',acateg,"_hist.pdf",sep=''))
+print(p)
+
+```
+
+```{r, fig.width = 9, fig.height = 20}
+
+# save plot for top practices
+p <- plot(top_lgr, wrap= 55, centered = FALSE)
+ggsave(plot = p, width = twidth, height = theight, dpi = 300,
+       filename = paste('./img/likert_',acateg,"_top.pdf",sep=''))
+print(p)
+```
+
+
+```{r, fig.width = 6, fig.height = 3}
+
+plot_params <- data.frame(
+    acateg  = c('what', 'when', 'why', 'where', 'how', 'who', 'howmuch'),
+    awidth  = c(12,     12,     12,    12,       12,    12,     12),
+    aheight = c(9,      3,      3,     4,        15,    5,      5),
+    hwidth  = c(5,      5,      5,     5,        5,     5,      5),
+    hheight = c(3,      3,      3,     3,        3,     3,      3),
+    twidth  = c(12,     12,     3,     12,       12,    12,     12),
+    theight = c(4,      2,      3,     3,        6,     3,      2),
+    hy      = c(0.0175, 0.05,   0.05,  0.05,     0.05,  0.03,  0.03),
+    hvjust  = c(-0.5,   -0.5,   -0.5,  -0.5,     -0.5,  1.1,   1.1)
+)
+
+for(row in 1:nrow(plot_params)){
+  acateg <- plot_params[row, "acateg"]
+  awidth <- plot_params[row, "awidth"]
+  aheight <- plot_params[row, "aheight"]
+  hwidth <- plot_params[row, "hwidth"]
+  hheight <- plot_params[row, "hheight"]
+  hy <- plot_params[row, "hy"]
+  hvjust <- plot_params[row, "hvjust"]
+  twidth <- plot_params[row, "twidth"]
+  theight <- plot_params[row, "theight"]
+  
+  items <- f_csv [,grepl(paste('^',acateg,"_.*[^g]$",sep=''), colnames(f_csv))]
+  
+  names(items) <- survey_dict[names(items)]
+  for(i in seq_along(items))items[,i] <- factor(items[,i], levels=survey_levels)
+  
+  lgr <- likert(items)
+  summ <- summary(lgr)
+  above_mean <- summ$high >= 50
+  top_lgr <- likert(items[,summ[above_mean,"Item"], drop=FALSE])
+  
+  # save plot for all practices
+  p <- plot(lgr, wrap= 80, centered = FALSE)
+  ggsave(plot = p, width = awidth, height = aheight, dpi = 300, 
+       filename = paste('./img/likert_',acateg,".pdf",sep=''))
+  
+  # Histogram with density plot
+  p <- ggplot(summ, aes(x=high)) +
+    geom_histogram(aes(y=..density..), colour="black", fill="white")+
+    geom_vline(aes(xintercept=mean(high)), # Add mean line
+              color="red", linetype="dashed", size=1)+
+    geom_text(aes(x=mean(high), label=sprintf("μ=%s", round(mean(high))),
+                  y=hy, vjust = hvjust),
+              colour="red", angle=90)+
+    labs(x = 'Percentage', y = 'Frequency')
+  ggsave(plot = p, width = hwidth, height = hheight, dpi = 300,
+         filename = paste('./img/likert_',acateg,"_hist.pdf",sep=''))
+  
+  # save plot for top practices
+  p <- plot(top_lgr, wrap= 80, centered = FALSE)
+  ggsave(plot = p, width = twidth, height = theight, dpi = 300,
+         filename = paste('./img/likert_',acateg,"_top.pdf",sep=''))
+}
+
+```
+
+```{r, fig.width = 6, fig.height = 3}
+plot_params <- data.frame(
+    acateg  = c('clarity', 'completeness', 'relevance'),
+    awidth  = c(4,         4,               4         ),
+    aheight = c(2.3,       2.3,             2.3       ),
+    hy      = c(0.30,      0.30,            0.30      ),
+    hvjust  = c(-0.5,      -0.5,            -0.5      )
+)
+
+for(row in 1:nrow(plot_params)){
+  acateg <- plot_params[row, "acateg"]
+  awidth <- plot_params[row, "awidth"]
+  aheight <- plot_params[row, "aheight"]
+  hy <- plot_params[row, "hy"]
+  hvjust <- plot_params[row, "hvjust"]
+  
+  mean_val <- mean(f_csv[,acateg])
+  adf <- as.data.frame(table(f_csv[,acateg])) %>%
+      arrange(Freq)
+  likscale <- 1:7
+  adf[,'Var1'] <- factor(adf[,'Var1'], levels = likscale)
+  adf <- rbind(adf, data.frame(
+    Var1 = likscale[!(likscale %in% adf[,'Var1'])], 
+    Freq = rep(0, sum(!(likscale %in% adf[,'Var1']))))
+    )
+  
+  
+  colnames(adf) <- c(acateg,'n')
+  
+  adf[1] <- sapply(adf[1],as.numeric)
+  
+  # Histogram with density plot
+  p <- ggplot(adf, aes_string(x=acateg,'n')) +
+    geom_bar(stat = 'identity', colour="black", fill="white")+
+    geom_vline(aes(xintercept=mean_val), # Add mean line
+              color="red", linetype="dashed")+
+    geom_text(aes(label = n), 
+           vjust = -0.2, position = position_dodge(width = 0.5),size = 2) +
+    scale_x_discrete(drop = FALSE)+
+    labs(x = paste(firstup(acateg), 'score'), 
+         y = 'Frequency', 
+         title = survey_dict[acateg]
+         )+
+    theme(plot.title = element_text(hjust = 0.5, size = 8),
+          axis.title.x = element_text(hjust = 0.5, size = 8),
+          axis.title.y = element_text(hjust = 0.5, size = 8)
+          )
+  ggsave(plot = p, width = awidth, height = aheight, dpi = 300,
+         filename = paste('./img/overallscore_',acateg,".pdf",sep=''))
+  print(p)
+  
+  print(paste('The % of scores >5 for the ', acateg,' is ',sum(adf[adf[1]>5,'n'])/sum(adf[,'n'])))
+  print(paste('The % of scores <3 for the ', acateg,' is ',sum(adf[adf[1]<3,'n'])/sum(adf[,'n'])))
+}
+
+```
+
+```{r, fig.width = 8, fig.height = 6}
+# load the csv file
+file_chall = '../data/04_guidelines_survey/practices4mde_05challenges_3Grouping.csv'
+awidth <- 8; aheight <- 6
+
+f_chall = read.csv(file_chall, header=TRUE)
+names(f_chall) <- c("Rank", "Challenge","Frequency")
+f_chall$Rank <- as.integer(f_chall$Rank)
+f_chall <-f_chall %>% 
+  na.omit() %>%
+  mutate(Challenge = paste('C',Rank,') ',Challenge,sep='')) %>%
+  mutate(Challenge = str_wrap(Challenge, width = 21)) 
+
+
+p <- ggplot(f_chall, aes(x=reorder(Challenge,-Rank),y=Frequency)) +
+  geom_bar(stat = 'identity', colour="black", fill="white")+
+  geom_text(aes(label = Frequency), 
+            hjust = -.50, position = position_dodge(width = 0.5),size = 3) +
+  scale_x_discrete(drop = FALSE)+
+  labs(x = 'Challenges in artifact sharing', 
+       y = 'Frequency', 
+       title = 'What are the top 10  challenges faced by MDE experts?')+
+  scale_fill_brewer(palette="Set1") +
+  coord_flip() + 
+  theme(plot.title = element_text(hjust = 0.5, size = 8),
+        axis.title.x = element_text(hjust = 0.5, size = 8),
+        axis.title.y = element_blank())
+  ggsave(plot = p, width = awidth, height = aheight, dpi = 300,
+         filename = './img/challenges_frequency.pdf')
+  print(p)
+```
