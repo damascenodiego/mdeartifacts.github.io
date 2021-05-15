@@ -1,0 +1,29 @@
+#,Issue,Count
+1,documentation / lack of information,26
+2,"compatibility (of languages, platforms, libraries)",20
+3,dependencies,9
+4,availability,8
+5,technology outdated / unavailable,7
+6,technology heterogeneity,7
+7,reusability,7
+8,installation,7
+9,exchange formats / lack of standardisation,6
+10,communication with developers,4
+,usability,3
+,maintenance,3
+,IP,3
+,bugs,4
+,structure,2
+,reproducibility,2
+,lack of realistic models,2
+,knowledge discrepancies,2
+,effort,2
+,completeness,2
+,artifact discovery,2
+,versioning,1
+,restrictions,1
+,quality,1
+,maturity,1
+,hosting,1
+,examples,1
+,closed source tools,1
