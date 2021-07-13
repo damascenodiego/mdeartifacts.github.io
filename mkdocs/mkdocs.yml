@@ -1,0 +1,7 @@
+site_name: MDE Artifacts
+site_url: https://mdeartifacts.github.io/
+nav:
+    - Home: index.md
+    - Guidelines: about.md
+    - About: 5w2h.md
+theme: readthedocs
