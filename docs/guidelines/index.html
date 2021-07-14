@@ -1,305 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        <link rel="canonical" href="https://mdeartifacts.github.io/guidelines/">
-        <link rel="shortcut icon" href="../img/favicon.ico">
-        <title>Guidelines for MDE artifacts - MDE Artifacts</title>
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css">
 
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
-    </head>
-
-    <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <div class="container">
-                <a class="navbar-brand" href="..">MDE Artifacts</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
-                        <!-- Main navigation -->
-                        <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href=".." class="nav-link">Home</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../intro5w2h/" class="nav-link">The 5w2h method</a>
-                            </li>
-                            <li class="navitem active">
-                                <a href="./" class="nav-link">Guidelines for MDE artifacts</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../relwork/" class="nav-link">Associated studies</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="../contactus/" class="nav-link">Contact us</a>
-                            </li>
-                        </ul>
-
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
-                                <i class="fa fa-search"></i> Search
-                            </a>
-                        </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../intro5w2h/" class="nav-link">
-                                    <i class="fa fa-arrow-left"></i> Previous
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../relwork/" class="nav-link">
-                                    Next <i class="fa fa-arrow-right"></i>
-                                </a>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="https://mdeartifacts.github.io/guidelines/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
+    <title>Guidelines for MDE artifacts - MDE Artifacts</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             
-            <li class="nav-item" data-level="1"><a href="#the-factual-questions" class="nav-link">The factual questions</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
+
+            <!-- Main title -->
+
             
-            <li class="nav-item" data-level="1"><a href="#the-list-of-research-best-practices" class="nav-link">The list of research best practices</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#what" class="nav-link">What?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#why" class="nav-link">Why?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#where" class="nav-link">Where?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#who" class="nav-link">Who?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#when" class="nav-link">When?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#how" class="nav-link">How?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#how-muchmany" class="nav-link">How much/many?</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
+              <a class="navbar-brand" href="..">MDE Artifacts</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../intro5w2h/">The 5w2h method</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Guidelines for MDE artifacts</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../relwork/">Associated studies</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../contactus/">Contact us</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../intro5w2h/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../relwork/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
     </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#the-factual-questions">The factual questions</a></li>
+        <li class="first-level "><a href="#the-list-of-research-best-practices">The list of research best practices</a></li>
+            <li class="second-level"><a href="#what">What?</a></li>
+                
+                <li class="third-level"><a href="#what-is-it-all-about">What is it all about?</a></li>
+                <li class="third-level"><a href="#what-does-it-have">What does it have?</a></li>
+                <li class="third-level"><a href="#what-concepts-and-technologies-underpin-the-artifact">What concepts and technologies underpin the artifact?</a></li>
+            <li class="second-level"><a href="#why">Why?</a></li>
+                
+                <li class="third-level"><a href="#why-it-was-created">Why it was created?</a></li>
+            <li class="second-level"><a href="#where">Where?</a></li>
+                
+                <li class="third-level"><a href="#where-is-it-hosted">Where is it hosted?</a></li>
+                <li class="third-level"><a href="#where-shall-i-cite">Where shall I cite?</a></li>
+                <li class="third-level"><a href="#where-to-find-related-work">Where to find related work?</a></li>
+            <li class="second-level"><a href="#who">Who?</a></li>
+                
+                <li class="third-level"><a href="#who-could-use-it">Who could use it?</a></li>
+            <li class="second-level"><a href="#when">When?</a></li>
+                
+                <li class="third-level"><a href="#when-did-changes-happen">When did changes happen?</a></li>
+                <li class="third-level"><a href="#when-do-future-changes-shall-happen">When do future changes shall happen?</a></li>
+            <li class="second-level"><a href="#how">How?</a></li>
+                
+                <li class="third-level"><a href="#how-is-it-organized">How is it organized?</a></li>
+                <li class="third-level"><a href="#how-to-set-up-a-running-environment">How to set up a running environment?</a></li>
+                <li class="third-level"><a href="#how-to-get-started">How to get started?</a></li>
+                <li class="third-level"><a href="#how-to-replicate-the-experiment">How to replicate the experiment?</a></li>
+                <li class="third-level"><a href="#how-to-run-the-analysis-of-results">How to run the analysis of results?</a></li>
+                <li class="third-level"><a href="#how-could-it-be-repurposed">How could it be repurposed?</a></li>
+            <li class="second-level"><a href="#how-muchmany">How much/many?</a></li>
+                
+                <li class="third-level"><a href="#how-many-resources-does-it-need">How many resources does it need?</a></li>
+    </ul>
 </div></div>
-                    <div class="col-md-9" role="main">
+        <div class="col-md-9" role="main">
 
 <h1 id="the-factual-questions">The factual questions</h1>
 <p><img alt="" src="../images/5w2h.png" /></p>
 <h1 id="the-list-of-research-best-practices">The list of research best practices</h1>
 <h2 id="what">What?</h2>
 <h3 id="what-is-it-all-about">What is it all about?</h3>
-<ol>
-<li>The artifact shall have a name for reference</li>
-<li>The artifact shall indicate its context of development (e.g., domain, problem, project)</li>
-<li>The artifact shall indicate the main functionalities supported (e.g., language support, code generation, model analysis)</li>
-<li>The artifact shall indicate the relation with its respective paper</li>
-</ol>
+<h4 id="1-the-artifact-shall-have-a-name-for-reference">1. The artifact shall have a name for reference</h4>
+<h4 id="2-the-artifact-shall-indicate-its-context-of-development-eg-domain-problem-project">2. The artifact shall indicate its context of development (e.g., domain, problem, project)</h4>
+<h4 id="3-the-artifact-shall-indicate-the-main-functionalities-supported-eg-language-support-code-generation-model-analysis">3. The artifact shall indicate the main functionalities supported (e.g., language support, code generation, model analysis)</h4>
+<h4 id="4-the-artifact-shall-indicate-the-relation-with-its-respective-paper">4. The artifact shall indicate the relation with its respective paper</h4>
 <h3 id="what-does-it-have">What does it have?</h3>
-<ol>
-<li>The artifact shall provide an overall description of its directory structure and content</li>
-<li>The artifact shall include everything required for replications (i.e., complete)</li>
-<li>The artifact shall include no more assets than necessary for replications (i.e., concise)</li>
-<li>The artifact shall include a preprint of its associated article</li>
-</ol>
+<h4 id="5-the-artifact-shall-provide-an-overall-description-of-its-directory-structure-and-content">5. The artifact shall provide an overall description of its directory structure and content</h4>
+<h4 id="6-the-artifact-shall-include-everything-required-for-replications-ie-complete">6. The artifact shall include everything required for replications (i.e., complete)</h4>
+<h4 id="7-the-artifact-shall-include-no-more-assets-than-necessary-for-replications-ie-concise">7. The artifact shall include no more assets than necessary for replications (i.e., concise)</h4>
+<h4 id="8-the-artifact-shall-include-a-preprint-of-its-associated-article">8. The artifact shall include a preprint of its associated article</h4>
 <h3 id="what-concepts-and-technologies-underpin-the-artifact">What concepts and technologies underpin the artifact?</h3>
-<ol>
-<li>The artifact shall indicate the theories that underpin its creation (e.g., formalisms, semantics)</li>
-<li>The artifact shall indicate the modeling languages used to develop it (e.g., UML, xtUML, SysML, BPMN)</li>
-<li>The artifact shall indicate the meta-modeling languages used to develop it (e.g., EMOF, CMOF, ECore/EMF, KM3)</li>
-<li>The artifact shall indicate the standards and/or specifications used to develop it (e.g., ISO, CMI, XMI, CWM, HUTN, JMI, DD, OCL)</li>
-<li>The artifact shall indicate the programming/markup language used to develop it</li>
-<li>The artifact shall indicate the libraries, dependencies, and frameworks used to develop it and their respective versions (e.g., Eclipse release)</li>
-<li>The artifact shall rely on open, well-maintained, and documented libraries or dependencies</li>
-</ol>
+<h4 id="9-the-artifact-shall-indicate-the-theories-that-underpin-its-creation-eg-formalisms-semantics">9. The artifact shall indicate the theories that underpin its creation (e.g., formalisms, semantics)</h4>
+<h4 id="10-the-artifact-shall-indicate-the-modeling-languages-used-to-develop-it-eg-uml-xtuml-sysml-bpmn">10. The artifact shall indicate the modeling languages used to develop it (e.g., UML, xtUML, SysML, BPMN)</h4>
+<h4 id="11-the-artifact-shall-indicate-the-meta-modeling-languages-used-to-develop-it-eg-emof-cmof-ecoreemf-km3">11. The artifact shall indicate the meta-modeling languages used to develop it (e.g., EMOF, CMOF, ECore/EMF, KM3)</h4>
+<h4 id="12-the-artifact-shall-indicate-the-standards-andor-specifications-used-to-develop-it-eg-iso-cmi-xmi-cwm-hutn-jmi-dd-ocl">12. The artifact shall indicate the standards and/or specifications used to develop it (e.g., ISO, CMI, XMI, CWM, HUTN, JMI, DD, OCL)</h4>
+<h4 id="13-the-artifact-shall-indicate-the-programmingmarkup-language-used-to-develop-it">13. The artifact shall indicate the programming/markup language used to develop it</h4>
+<h4 id="14-the-artifact-shall-indicate-the-libraries-dependencies-and-frameworks-used-to-develop-it-and-their-respective-versions-eg-eclipse-release">14. The artifact shall indicate the libraries, dependencies, and frameworks used to develop it and their respective versions (e.g., Eclipse release)</h4>
+<h4 id="15-the-artifact-shall-rely-on-open-well-maintained-and-documented-libraries-or-dependencies">15. The artifact shall rely on open, well-maintained, and documented libraries or dependencies</h4>
 <h2 id="why">Why?</h2>
 <h3 id="why-it-was-created">Why it was created?</h3>
-<ol>
-<li>The artifact shall report the motivation for its development</li>
-<li>The artifact shall report its objective/goal (e.g., verify claims, replicability, reusability, a whole new library/framework)</li>
-<li>The artifact shall indicate its advantages and/or novelty (e.g., algorithm, language, method)</li>
-</ol>
+<h4 id="16-the-artifact-shall-report-the-motivation-for-its-development">16. The artifact shall report the motivation for its development</h4>
+<h4 id="17-the-artifact-shall-report-its-objectivegoal-eg-verify-claims-replicability-reusability-a-whole-new-libraryframework">17. The artifact shall report its objective/goal (e.g., verify claims, replicability, reusability, a whole new library/framework)</h4>
+<h4 id="18-the-artifact-shall-indicate-its-advantages-andor-novelty-eg-algorithm-language-method">18. The artifact shall indicate its advantages and/or novelty (e.g., algorithm, language, method)</h4>
 <h2 id="where">Where?</h2>
 <h3 id="where-is-it-hosted">Where is it hosted?</h3>
-<ol>
-<li>The artifact shall be hosted in an open, public repository (e.g., GitHub, BitBucket, Zenodo, Figshare)</li>
-<li>The artifact shall be hosted in a repository indexed and findable by search engines (e.g., GitHub, BitBucket, Zenodo, Figshare)</li>
-<li>The artifact shall be archived for long-term, permanent access (e.g., Zenodo, Figshare)</li>
-</ol>
+<h4 id="19-the-artifact-shall-be-hosted-in-an-open-public-repository-eg-github-bitbucket-zenodo-figshare">19. The artifact shall be hosted in an open, public repository (e.g., GitHub, BitBucket, Zenodo, Figshare)</h4>
+<h4 id="20-the-artifact-shall-be-hosted-in-a-repository-indexed-and-findable-by-search-engines-eg-github-bitbucket-zenodo-figshare">20. The artifact shall be hosted in a repository indexed and findable by search engines (e.g., GitHub, BitBucket, Zenodo, Figshare)</h4>
+<h4 id="21-the-artifact-shall-be-archived-for-long-term-permanent-access-eg-zenodo-figshare">21. The artifact shall be archived for long-term, permanent access (e.g., Zenodo, Figshare)</h4>
 <h3 id="where-shall-i-cite">Where shall I cite?</h3>
-<ol>
-<li>The artifact shall provide an explicit format for citation (e.g., in a CITATION or README file)</li>
-<li>The artifact shall provide citation information in a BibTeX format</li>
-<li>The artifact shall provide an URL for citation</li>
-<li>The artifact shall provide a DOI for citation</li>
-</ol>
+<h4 id="22-the-artifact-shall-provide-an-explicit-format-for-citation-eg-in-a-citation-or-readme-file">22. The artifact shall provide an explicit format for citation (e.g., in a CITATION or README file)</h4>
+<h4 id="23-the-artifact-shall-provide-citation-information-in-a-bibtex-format">23. The artifact shall provide citation information in a BibTeX format</h4>
+<h4 id="24-the-artifact-shall-provide-an-url-for-citation">24. The artifact shall provide an URL for citation</h4>
+<h4 id="25-the-artifact-shall-provide-a-doi-for-citation">25. The artifact shall provide a DOI for citation</h4>
 <h3 id="where-to-find-related-work">Where to find related work?</h3>
-<ol>
-<li>The artifact shall give credit to data obtained from other sources (e.g., authors, paper, repository, benchmark)</li>
-<li>The artifact shall provide references about key concepts (e.g., papers, surveys, wiki, reports)</li>
-<li>The artifact shall provide references to studies using it (e.g., known uses, integrated with)</li>
-<li>The artifact shall provide references to related projects</li>
-<li>The artifact shall provide references using in-code citation (e.g., code header)</li>
-</ol>
+<h4 id="26-the-artifact-shall-give-credit-to-data-obtained-from-other-sources-eg-authors-paper-repository-benchmark">26. The artifact shall give credit to data obtained from other sources (e.g., authors, paper, repository, benchmark)</h4>
+<h4 id="27-the-artifact-shall-provide-references-about-key-concepts-eg-papers-surveys-wiki-reports">27. The artifact shall provide references about key concepts (e.g., papers, surveys, wiki, reports)</h4>
+<h4 id="28-the-artifact-shall-provide-references-to-studies-using-it-eg-known-uses-integrated-with">28. The artifact shall provide references to studies using it (e.g., known uses, integrated with)</h4>
+<h4 id="29-the-artifact-shall-provide-references-to-related-projects">29. The artifact shall provide references to related projects</h4>
+<h4 id="30-the-artifact-shall-provide-references-using-in-code-citation-eg-code-header">30. The artifact shall provide references using in-code citation (e.g., code header)</h4>
 <h2 id="who">Who?</h2>
 <h3 id="who-could-use-it">Who could use it?</h3>
-<ol>
-<li>The artifact shall be deposited under an explicit open license (e.g., reported in a LICENSE file)</li>
-<li>Files shall be made available using open/non-proprietary formats (e.g., JSON, open XML schema)</li>
-<li>The artifact shall indicate a list of potential users (e.g., professionals, researchers, industry sectors)</li>
-<li>The artifact shall provide a communication channel for interacting with the community (e.g., forum, mailing list, issue tracker, IRC, Slack, Discord)</li>
-<li>The artifact shall indicate the names of its authors</li>
-<li>The artifact shall indicate the institution of its authors</li>
-<li>The artifact shall indicate the contact details of its authors/collaborators (e.g., email address, ResearchGate, Linkedin, website)</li>
-<li>The artifact shall indicate the ORCID of its authors/collaborators</li>
-<li>The artifact shall indicate the level of experience of its authors/collaborators (e.g., bio, degree, position)</li>
-<li>The artifact shall indicate the funding agencies that supported the project (e.g., ERC, NWO, CNPq, DFG, EPSRC, NSF)</li>
-</ol>
+<h4 id="31-the-artifact-shall-be-deposited-under-an-explicit-open-license-eg-reported-in-a-license-file">31. The artifact shall be deposited under an explicit open license (e.g., reported in a LICENSE file)</h4>
+<h4 id="32-files-shall-be-made-available-using-opennon-proprietary-formats-eg-json-open-xml-schema">32. Files shall be made available using open/non-proprietary formats (e.g., JSON, open XML schema)</h4>
+<h4 id="33-the-artifact-shall-indicate-a-list-of-potential-users-eg-professionals-researchers-industry-sectors">33. The artifact shall indicate a list of potential users (e.g., professionals, researchers, industry sectors)</h4>
+<h4 id="34-the-artifact-shall-provide-a-communication-channel-for-interacting-with-the-community-eg-forum-mailing-list-issue-tracker-irc-slack-discord">34. The artifact shall provide a communication channel for interacting with the community (e.g., forum, mailing list, issue tracker, IRC, Slack, Discord)</h4>
+<h4 id="35-the-artifact-shall-indicate-the-names-of-its-authors">35. The artifact shall indicate the names of its authors</h4>
+<h4 id="36-the-artifact-shall-indicate-the-institution-of-its-authors">36. The artifact shall indicate the institution of its authors</h4>
+<h4 id="37-the-artifact-shall-indicate-the-contact-details-of-its-authorscollaborators-eg-email-address-researchgate-linkedin-website">37. The artifact shall indicate the contact details of its authors/collaborators (e.g., email address, ResearchGate, Linkedin, website)</h4>
+<h4 id="38-the-artifact-shall-indicate-the-orcid-of-its-authorscollaborators">38. The artifact shall indicate the ORCID of its authors/collaborators</h4>
+<h4 id="39-the-artifact-shall-indicate-the-level-of-experience-of-its-authorscollaborators-eg-bio-degree-position">39. The artifact shall indicate the level of experience of its authors/collaborators (e.g., bio, degree, position)</h4>
+<h4 id="40-the-artifact-shall-indicate-the-funding-agencies-that-supported-the-project-eg-erc-nwo-cnpq-dfg-epsrc-nsf">40. The artifact shall indicate the funding agencies that supported the project (e.g., ERC, NWO, CNPq, DFG, EPSRC, NSF)</h4>
 <h2 id="when">When?</h2>
 <h3 id="when-did-changes-happen">When did changes happen?</h3>
-<ol>
-<li>Changes to the artifact shall be tracked using version control (e.g., GitHub, GitLab, BitBucket)</li>
-<li>Changes to the artifact shall be small (e.g., conciseness, cohesion, clear edit)</li>
-<li>Changes to the artifact shall be explained (e.g., CHANGELOG, commit messages)</li>
-<li>The artifact shall allow referencing or retrieving specific versions using tags and/or release identifiers</li>
-</ol>
+<h4 id="41-changes-to-the-artifact-shall-be-tracked-using-version-control-eg-github-gitlab-bitbucket">41. Changes to the artifact shall be tracked using version control (e.g., GitHub, GitLab, BitBucket)</h4>
+<h4 id="42-changes-to-the-artifact-shall-be-small-eg-conciseness-cohesion-clear-edit">42. Changes to the artifact shall be small (e.g., conciseness, cohesion, clear edit)</h4>
+<h4 id="43-changes-to-the-artifact-shall-be-explained-eg-changelog-commit-messages">43. Changes to the artifact shall be explained (e.g., CHANGELOG, commit messages)</h4>
+<h4 id="44-the-artifact-shall-allow-referencing-or-retrieving-specific-versions-using-tags-andor-release-identifiers">44. The artifact shall allow referencing or retrieving specific versions using tags and/or release identifiers</h4>
 <h3 id="when-do-future-changes-shall-happen">When do future changes shall happen?</h3>
-<ol>
-<li>The artifact shall provide a timeline for future goals and planned updates (e.g., frequency, next steps, future work plans)</li>
-<li>The artifact shall be open for change requests and receiving feedback from users (e.g., bug fixes, pull requests, collaboration)</li>
-</ol>
+<h4 id="45-the-artifact-shall-provide-a-timeline-for-future-goals-and-planned-updates-eg-frequency-next-steps-future-work-plans">45. The artifact shall provide a timeline for future goals and planned updates (e.g., frequency, next steps, future work plans)</h4>
+<h4 id="46-the-artifact-shall-be-open-for-change-requests-and-receiving-feedback-from-users-eg-bug-fixes-pull-requests-collaboration">46. The artifact shall be open for change requests and receiving feedback from users (e.g., bug fixes, pull requests, collaboration)</h4>
 <h2 id="how">How?</h2>
 <h3 id="how-is-it-organized">How is it organized?</h3>
-<ol>
-<li>Tabular data files shall follow analysis-friendly formats (e.g., the column is variable, the row is observation, data dictionary, the meaning of column/row headers)</li>
-<li>Files and folders shall have self-explaining names matching content, meaning, and human abstractions (e.g., doc/, src/, results/, src/, bin/)</li>
-<li>The artifact shall indicate best practices used (e.g., naming or code conventions, guidelines/checklists)</li>
-<li>Useful metadata shall be used as part of filenames for pattern matching (e.g., yyyymmdd), where meaningful</li>
-<li>The artifact shall be compliant with ICT accessibility standards (e.g., Section 508, WAI)</li>
-<li>The experiment workflow shall be broken-down into small and simple procedures to facilitate reuse (e.g., scripts, functions)</li>
-<li>The artifact shall include a website or wiki-page</li>
-</ol>
+<h4 id="47-tabular-data-files-shall-follow-analysis-friendly-formats-eg-the-column-is-variable-the-row-is-observation-data-dictionary-the-meaning-of-columnrow-headers">47. Tabular data files shall follow analysis-friendly formats (e.g., the column is variable, the row is observation, data dictionary, the meaning of column/row headers)</h4>
+<h4 id="48-files-and-folders-shall-have-self-explaining-names-matching-content-meaning-and-human-abstractions-eg-doc-src-results-src-bin">48. Files and folders shall have self-explaining names matching content, meaning, and human abstractions (e.g., doc/, src/, results/, src/, bin/)</h4>
+<h4 id="49-the-artifact-shall-indicate-best-practices-used-eg-naming-or-code-conventions-guidelineschecklists">49. The artifact shall indicate best practices used (e.g., naming or code conventions, guidelines/checklists)</h4>
+<h4 id="50-useful-metadata-shall-be-used-as-part-of-filenames-for-pattern-matching-eg-yyyymmdd-where-meaningful">50. Useful metadata shall be used as part of filenames for pattern matching (e.g., yyyymmdd), where meaningful</h4>
+<h4 id="51-the-artifact-shall-be-compliant-with-ict-accessibility-standards-eg-section-508-wai">51. The artifact shall be compliant with ICT accessibility standards (e.g., Section 508, WAI)</h4>
+<h4 id="52-the-experiment-workflow-shall-be-broken-down-into-small-and-simple-procedures-to-facilitate-reuse-eg-scripts-functions">52. The experiment workflow shall be broken-down into small and simple procedures to facilitate reuse (e.g., scripts, functions)</h4>
+<h4 id="53-the-artifact-shall-include-a-website-or-wiki-page">53. The artifact shall include a website or wiki-page</h4>
 <h3 id="how-to-set-up-a-running-environment">How to set up a running environment?</h3>
-<ol>
-<li>The artifact shall provide instructions for downloading</li>
-<li>The artifact shall provide the open-source code</li>
-<li>The artifact shall provide a binary/compiled version</li>
-<li>The artifact shall provide a container for freezing dependencies and quickly setting up a running environment (e.g., VM, Docker)</li>
-<li>The artifact shall provide a step-by-step tutorial of how to build the source code</li>
-<li>The artifact compilation shall rely on build automation tools (e.g., make, ant)</li>
-<li>The artifact compilation shall rely on dependency management tools (e.g., maven, pip)</li>
-<li>The artifact shall provide instructions to install it</li>
-</ol>
+<h4 id="54-the-artifact-shall-provide-instructions-for-downloading">54. The artifact shall provide instructions for downloading</h4>
+<h4 id="55-the-artifact-shall-provide-the-open-source-code">55. The artifact shall provide the open-source code</h4>
+<h4 id="56-the-artifact-shall-provide-a-binarycompiled-version">56. The artifact shall provide a binary/compiled version</h4>
+<h4 id="57-the-artifact-shall-provide-a-container-for-freezing-dependencies-and-quickly-setting-up-a-running-environment-eg-vm-docker">57. The artifact shall provide a container for freezing dependencies and quickly setting up a running environment (e.g., VM, Docker)</h4>
+<h4 id="58-the-artifact-shall-provide-a-step-by-step-tutorial-of-how-to-build-the-source-code">58. The artifact shall provide a step-by-step tutorial of how to build the source code</h4>
+<h4 id="59-the-artifact-compilation-shall-rely-on-build-automation-tools-eg-make-ant">59. The artifact compilation shall rely on build automation tools (e.g., make, ant)</h4>
+<h4 id="60-the-artifact-compilation-shall-rely-on-dependency-management-tools-eg-maven-pip">60. The artifact compilation shall rely on dependency management tools (e.g., maven, pip)</h4>
+<h4 id="61-the-artifact-shall-provide-instructions-to-install-it">61. The artifact shall provide instructions to install it</h4>
 <h3 id="how-to-get-started">How to get started?</h3>
-<ol>
-<li>The artifact shall include instructions for running it on minimal test data (e.g., quick run, smoke testing)</li>
-<li>The artifact shall indicate the most relevant and interesting parts of the source code/artifact</li>
-<li>The artifact shall include step-by-step instructions for running it (e.g., README, PDF)</li>
-<li>The artifact shall include a video tutorial with the step-by-step for running it (e.g., Youtube, Vimeo)</li>
-</ol>
+<h4 id="62-the-artifact-shall-include-instructions-for-running-it-on-minimal-test-data-eg-quick-run-smoke-testing">62. The artifact shall include instructions for running it on minimal test data (e.g., quick run, smoke testing)</h4>
+<h4 id="63-the-artifact-shall-indicate-the-most-relevant-and-interesting-parts-of-the-source-codeartifact">63. The artifact shall indicate the most relevant and interesting parts of the source code/artifact</h4>
+<h4 id="64-the-artifact-shall-include-step-by-step-instructions-for-running-it-eg-readme-pdf">64. The artifact shall include step-by-step instructions for running it (e.g., README, PDF)</h4>
+<h4 id="65-the-artifact-shall-include-a-video-tutorial-with-the-step-by-step-for-running-it-eg-youtube-vimeo">65. The artifact shall include a video tutorial with the step-by-step for running it (e.g., Youtube, Vimeo)</h4>
 <h3 id="how-to-replicate-the-experiment">How to replicate the experiment?</h3>
-<ol>
-<li>The artifact shall include the complete set of test models analyzed</li>
-<li>The artifact shall provide instructions for manual/automated pre-processing of raw data for experiments (e.g., bash, python, R script)</li>
-<li>The artifact shall provide instructions for manual/automated replication of the complete (or at least a subset) experiment as in the paper (e.g., bash, python, R script)</li>
-<li>The experiment workflow shall be fully automated (including raw data processing, experiment execution, figures plotting)</li>
-<li>The artifact shall include the experiment results shown in its associated paper in tabular and machine-readable format (e.g., .csv, .tab)</li>
-<li>The artifact shall include log files produced</li>
-</ol>
+<h4 id="66-the-artifact-shall-include-the-complete-set-of-test-models-analyzed">66. The artifact shall include the complete set of test models analyzed</h4>
+<h4 id="67-the-artifact-shall-provide-instructions-for-manualautomated-pre-processing-of-raw-data-for-experiments-eg-bash-python-r-script">67. The artifact shall provide instructions for manual/automated pre-processing of raw data for experiments (e.g., bash, python, R script)</h4>
+<h4 id="68-the-artifact-shall-provide-instructions-for-manualautomated-replication-of-the-complete-or-at-least-a-subset-experiment-as-in-the-paper-eg-bash-python-r-script">68. The artifact shall provide instructions for manual/automated replication of the complete (or at least a subset) experiment as in the paper (e.g., bash, python, R script)</h4>
+<h4 id="69-the-experiment-workflow-shall-be-fully-automated-including-raw-data-processing-experiment-execution-figures-plotting">69. The experiment workflow shall be fully automated (including raw data processing, experiment execution, figures plotting)</h4>
+<h4 id="70-the-artifact-shall-include-the-experiment-results-shown-in-its-associated-paper-in-tabular-and-machine-readable-format-eg-csv-tab">70. The artifact shall include the experiment results shown in its associated paper in tabular and machine-readable format (e.g., .csv, .tab)</h4>
+<h4 id="71-the-artifact-shall-include-log-files-produced">71. The artifact shall include log files produced</h4>
 <h3 id="how-to-run-the-analysis-of-results">How to run the analysis of results?</h3>
-<ol>
-<li>The artifact shall include scripts for the automated analysis of results as in the paper (e.g., R scripts, python scripts, Jupyter notebooks)</li>
-<li>The artifact shall include scripts for drawing figures and/or plots as in the paper (e.g., R scripts, python scripts, Jupyter notebooks)</li>
-<li>The artifact shall provide a clear description of the measurement procedures and metrics used in the paper</li>
-</ol>
+<h4 id="72-the-artifact-shall-include-scripts-for-the-automated-analysis-of-results-as-in-the-paper-eg-r-scripts-python-scripts-jupyter-notebooks">72. The artifact shall include scripts for the automated analysis of results as in the paper (e.g., R scripts, python scripts, Jupyter notebooks)</h4>
+<h4 id="73-the-artifact-shall-include-scripts-for-drawing-figures-andor-plots-as-in-the-paper-eg-r-scripts-python-scripts-jupyter-notebooks">73. The artifact shall include scripts for drawing figures and/or plots as in the paper (e.g., R scripts, python scripts, Jupyter notebooks)</h4>
+<h4 id="74-the-artifact-shall-provide-a-clear-description-of-the-measurement-procedures-and-metrics-used-in-the-paper">74. The artifact shall provide a clear description of the measurement procedures and metrics used in the paper</h4>
 <h3 id="how-could-it-be-repurposed">How could it be repurposed?</h3>
-<ol>
-<li>The artifact shall indicate suggestions for contributions (e.g., notes.txt, todo.txt, ways it could be repurposed, wishlist)</li>
-<li>The artifact documentation shall be designed considering users with minimal expertise</li>
-<li>The artifact shall provide details about ethical concerns in replications</li>
-<li>The artifact source code shall be documented (e.g., in-code comments, Javadoc)</li>
-<li>The artifact shall provide instructions for integration/chaining with commercial tools (e.g., Matlab, DOORS)</li>
-<li>The artifact shall report known issues, bugs, and limitations (e.g., issue tracker)</li>
-</ol>
+<h4 id="75-the-artifact-shall-indicate-suggestions-for-contributions-eg-notestxt-todotxt-ways-it-could-be-repurposed-wishlist">75. The artifact shall indicate suggestions for contributions (e.g., notes.txt, todo.txt, ways it could be repurposed, wishlist)</h4>
+<h4 id="76-the-artifact-documentation-shall-be-designed-considering-users-with-minimal-expertise">76. The artifact documentation shall be designed considering users with minimal expertise</h4>
+<h4 id="77-the-artifact-shall-provide-details-about-ethical-concerns-in-replications">77. The artifact shall provide details about ethical concerns in replications</h4>
+<h4 id="78-the-artifact-source-code-shall-be-documented-eg-in-code-comments-javadoc">78. The artifact source code shall be documented (e.g., in-code comments, Javadoc)</h4>
+<h4 id="79-the-artifact-shall-provide-instructions-for-integrationchaining-with-commercial-tools-eg-matlab-doors">79. The artifact shall provide instructions for integration/chaining with commercial tools (e.g., Matlab, DOORS)</h4>
+<h4 id="80-the-artifact-shall-report-known-issues-bugs-and-limitations-eg-issue-tracker">80. The artifact shall report known issues, bugs, and limitations (e.g., issue tracker)</h4>
 <h2 id="how-muchmany">How much/many?</h2>
 <h3 id="how-many-resources-does-it-need">How many resources does it need?</h3>
-<ol>
-<li>The artifact shall indicate the system and environment where it was successfully evaluated (e.g., OS, CPU, RAM, GPU, Disk)</li>
-<li>The artifact shall indicate the minimum system and environment requirements for usage (e.g., OS, CPU, RAM, GPU, Disk)</li>
-<li>The artifact shall indicate the skills and/or settings required for usage (e.g., team configuration, users' skills)</li>
-<li>The artifact shall indicate the approximate amount of time needed to replicate the experiment</li>
-</ol></div>
-            </div>
-        </div>
+<h4 id="81-the-artifact-shall-indicate-the-system-and-environment-where-it-was-successfully-evaluated-eg-os-cpu-ram-gpu-disk">81. The artifact shall indicate the system and environment where it was successfully evaluated (e.g., OS, CPU, RAM, GPU, Disk)</h4>
+<h4 id="82-the-artifact-shall-indicate-the-minimum-system-and-environment-requirements-for-usage-eg-os-cpu-ram-gpu-disk">82. The artifact shall indicate the minimum system and environment requirements for usage (e.g., OS, CPU, RAM, GPU, Disk)</h4>
+<h4 id="83-the-artifact-shall-indicate-the-skills-andor-settings-required-for-usage-eg-team-configuration-users-skills">83. The artifact shall indicate the skills and/or settings required for usage (e.g., team configuration, users' skills)</h4>
+<h4 id="84-the-artifact-shall-indicate-the-approximate-amount-of-time-needed-to-replicate-the-experiment">84. The artifact shall indicate the approximate amount of time needed to replicate the experiment</h4></div>
+        
+        
+    </div>
 
-        <footer class="col-md-12">
+    
+      <footer class="col-md-12 text-center">
+          
+          
             <hr>
-            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
-        </footer>
-        <script>
-            var base_url = "..",
-                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
-        </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
                 <h4 class="modal-title" id="searchModalLabel">Search</h4>
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
             </div>
             <div class="modal-body">
-                <p>From here you can search these documents. Enter your search terms below.</p>
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
                 <form>
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+                <div id="mkdocs-search-results"></div>
             </div>
             <div class="modal-footer">
             </div>
@@ -345,6 +372,6 @@
         </div>
     </div>
 </div>
-
     </body>
+
 </html>

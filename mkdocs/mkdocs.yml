@@ -7,4 +7,4 @@ nav:
     - Associated studies: relwork.md
     - Contact us: contactus.md
 theme:
-    name: 'mkdocs'
+    name: 'cinder'
