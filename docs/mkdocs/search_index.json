@@ -2,7 +2,7 @@
     "docs": [
         {
             "location": "/",
-            "text": "MDE Artifacts\n\n\nThe \nMDE Artifacts\n project introduces a set of guidelines for artifact sharing specifically tailored to MDE research.\nThese guidelines are structured as a \nlist of factual questions\n that cover quality concerns which\nartifact authors, reviewers and Artifact Evaluation Committees (AEC) may ask about a research artifact.\nFor each factual question, we also present a list of research best practices that can be used to\naddress those respective factual question (i.e., quality concerns).\n\n\nProject layout\n\n\nThis project is organized as follows:\n\n\n\n\nThe 5w2h method\n - A simple but useful framework for artifact authoring and reviewing.\n\n\nGuidelines for MDE artifact sharing\n - List of research best practices for MDE artifact sharing.\n\n\nRelated work\n - List of research/case studies associated with this project.\n\n\nFAQ\n - List \"\nF\nactually\" \nA\nsked \nQ\nuestions about our project.",
+            "text": "MDE Artifacts\n\n\nThe \nMDE Artifacts\n project introduces a set of guidelines for artifact sharing specifically tailored to MDE research.\nThese guidelines are structured as a \nlist of factual questions\n that cover quality concerns which\nartifact authors, reviewers and Artifact Evaluation Committees (AEC) may ask about a research artifact.\nFor each factual question, we also present a list of research best practices that can be used to\naddress those respective factual question (i.e., quality concerns).\n\n\nProject layout\n\n\nThis project is organized as follows:\n\n\n\n\nThe 5w2h method\n - A simple but useful framework for artifact authoring and reviewing.\n\n\nGuidelines for MDE artifact sharing\n - List of research best practices for MDE artifact sharing.\n\n\nAssociated studies\n - List of research/case studies associated with this project.\n\n\nFAQ\n - List \"\nF\nactually\" \nA\nsked \nQ\nuestions about our project.",
             "title": "Home"
         },
         {
@@ -12,7 +12,7 @@
         },
         {
             "location": "/#project-layout",
-            "text": "This project is organized as follows:   The 5w2h method  - A simple but useful framework for artifact authoring and reviewing.  Guidelines for MDE artifact sharing  - List of research best practices for MDE artifact sharing.  Related work  - List of research/case studies associated with this project.  FAQ  - List \" F actually\"  A sked  Q uestions about our project.",
+            "text": "This project is organized as follows:   The 5w2h method  - A simple but useful framework for artifact authoring and reviewing.  Guidelines for MDE artifact sharing  - List of research best practices for MDE artifact sharing.  Associated studies  - List of research/case studies associated with this project.  FAQ  - List \" F actually\"  A sked  Q uestions about our project.",
             "title": "Project layout"
         },
         {
@@ -23,16 +23,16 @@
         {
             "location": "/guidelines/",
             "text": "",
-            "title": "Guidelines"
+            "title": "Guidelines for MDE artifacts"
         },
         {
             "location": "/relwork/",
-            "text": "Damasceno & Str\u00fcber (2021)\n\n\n\n\nFull paper: \"\nQuality Guidelines for Research Artifacts in Model-Driven Engineering\n.\"\n\n\nVenue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems \n\n\nTrack: Foundations track\n\n\nYear: 2021.\n\n\n\n\nResearch artifact\n: \nThe research artifact associated with this paper is available on \n\nGitHub @ damascenodiego/mdeartifacts.github.io\n.\nThis folder is organized as follows:\n\n\n      artifacts/202107_models/analysis/ # Rscripts to analyze our survey results\n          img/                          # Plots generated from the analysis\n      artifacts/202107_models/data/ # Data collected during the questionnaire \n          01_practices_extracted/   # Docx files with the 280 research practices extracted\n          02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H \n          03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)\n          04_guidelines_survey/     # Survey snapshot, and Anonymized results\n\n\n\nxxx & yyy (2022)",
-            "title": "Related Work"
+            "text": "Damasceno & Str\u00fcber (2021)\n\n\n\n\nFull paper: \"\nQuality Guidelines for Research Artifacts in Model-Driven Engineering\n.\"\n\n\nVenue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems\n\n\nTrack: Foundations track\n\n\nYear: 2021.\n\n\n\n\nResearch artifact\n:\nThe research artifact associated with this paper is available on\n\nGitHub @ damascenodiego/mdeartifacts.github.io\n\n. This folder is organized as follows:\n\n\n      artifacts/202107_models/analysis/ # Rscripts to analyze our survey results\n          img/                          # Plots generated from the analysis\n      artifacts/202107_models/data/ # Data collected during the questionnaire \n          01_practices_extracted/   # Docx files with the 280 research practices extracted\n          02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H \n          03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)\n          04_guidelines_survey/     # Survey snapshot, and Anonymized results\n\n\n\nxxx & yyy (2022)",
+            "title": "Associated studies"
         },
         {
             "location": "/relwork/#damasceno-struber-2021",
-            "text": "Full paper: \" Quality Guidelines for Research Artifacts in Model-Driven Engineering .\"  Venue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems   Track: Foundations track  Year: 2021.   Research artifact : \nThe research artifact associated with this paper is available on  GitHub @ damascenodiego/mdeartifacts.github.io .\nThis folder is organized as follows:        artifacts/202107_models/analysis/ # Rscripts to analyze our survey results\n          img/                          # Plots generated from the analysis\n      artifacts/202107_models/data/ # Data collected during the questionnaire \n          01_practices_extracted/   # Docx files with the 280 research practices extracted\n          02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H \n          03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)\n          04_guidelines_survey/     # Survey snapshot, and Anonymized results",
+            "text": "Full paper: \" Quality Guidelines for Research Artifacts in Model-Driven Engineering .\"  Venue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems  Track: Foundations track  Year: 2021.   Research artifact :\nThe research artifact associated with this paper is available on GitHub @ damascenodiego/mdeartifacts.github.io \n. This folder is organized as follows:        artifacts/202107_models/analysis/ # Rscripts to analyze our survey results\n          img/                          # Plots generated from the analysis\n      artifacts/202107_models/data/ # Data collected during the questionnaire \n          01_practices_extracted/   # Docx files with the 280 research practices extracted\n          02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H \n          03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)\n          04_guidelines_survey/     # Survey snapshot, and Anonymized results",
             "title": "Damasceno &amp; Str\u00fcber (2021)"
         },
         {
@@ -174,31 +174,6 @@
             "location": "/faq/#how-many-resources-does-it-need",
             "text": "For the survey, we used the Google Forms platform.   Google Forms : https://www.google.com/forms/about/   For the statistical analysis, we used the\nfollowing following version of the R Statistical Package:   platform :       x86_64-w64-mingw32            arch :           x86_64                        os :             mingw32                       version.string : R version 4.0.5 (2021-03-31)   The R statistical package was run using the following version of the RStudio IDE:   RStudio : Version 1.4.1106   The hardware settings were:   OS Name :  Microsoft Windows 10 Pro  Version :  10.0.19042 Build 19042  System Type :  x64-based PC  Processor :    Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz, 2304 Mhz, 4 Core(s), 8 Logical Processor(s)",
             "title": "How many resources does it need?"
-        },
-        {
-            "location": "/about/",
-            "text": "Pater verbis aduncae rapis referrem angue pallorque\n\n\nInde rebus mortalia cognoscit innumeris hosti\n\n\nLorem markdownum erat. A non inquit pomis. Illic Lycias suoque, hominemque\ncruori cumque effugies praeterit Achivi.\n\n\n\n\nNavale strictumque ludere illos sed at sum Minos \ntandem habet totidemque\n\nilli feres. Mox sic hanc ad saepe medicata imperat addidit.\n\n\n\n\nLiquida videre solus\n\n\nDigitis removit magnorum flamine precibusque isse iterum altissima idemque\nduorum, aevi modo caecis! Sidera quos nebulas quantum omnibus rogos metum medio\nnon sanguinis \ntempla\n. Tamen \nin\n, ex opacae copula unum\naequa, favore igne. Ingemit obnoxia in dracones sudore.\n\n\n\n\nFinierat senectae protectus\n\n\nSuccedit velum memorare\n\n\nNovem tacuit Arcade\n\n\nNoviens iuvenis ratione intrat ipse ipsa Autonoe\n\n\n\n\nFumantiaque aderit Aenea nova verba\n\n\nHabet adhuc. Pingebat in \ndempta\n habebat Alcathoen, habet tenet \nrigore\n.\n\n\nAbire se pelagoque extulerat sine patet et exarsit percussus oscula petitam,\ncurat bacchantum suaque pro. Ubi poenaededidit aevo deum comites: paretur arce,\nfuroribus, membris illuc? Remorata ab anxius Iovem. Tecum amor submota et\nvolucres, quae \natria amplectitur\n vel! Haec notitiam inplevit luminis mortisque\nquisquis et questa filis possedit \ncoeperunt\n.\n\n\nCarinam \npetit ulla\n est legem alimentaque\namnis; o vertit dictis laetus occasus traxit? Aulaea necopina deos venenum\nignarus serpentis, fame plena reddidit dici Arethusa an molles aequor tempora\nTalibus undae. Repagula nullis. Quique modo non Philemon; erat versuta,\nsepulcrum.",
-            "title": "ABOUT"
-        },
-        {
-            "location": "/about/#pater-verbis-aduncae-rapis-referrem-angue-pallorque",
-            "text": "",
-            "title": "Pater verbis aduncae rapis referrem angue pallorque"
-        },
-        {
-            "location": "/about/#inde-rebus-mortalia-cognoscit-innumeris-hosti",
-            "text": "Lorem markdownum erat. A non inquit pomis. Illic Lycias suoque, hominemque\ncruori cumque effugies praeterit Achivi.   Navale strictumque ludere illos sed at sum Minos  tandem habet totidemque \nilli feres. Mox sic hanc ad saepe medicata imperat addidit.",
-            "title": "Inde rebus mortalia cognoscit innumeris hosti"
-        },
-        {
-            "location": "/about/#liquida-videre-solus",
-            "text": "Digitis removit magnorum flamine precibusque isse iterum altissima idemque\nduorum, aevi modo caecis! Sidera quos nebulas quantum omnibus rogos metum medio\nnon sanguinis  templa . Tamen  in , ex opacae copula unum\naequa, favore igne. Ingemit obnoxia in dracones sudore.   Finierat senectae protectus  Succedit velum memorare  Novem tacuit Arcade  Noviens iuvenis ratione intrat ipse ipsa Autonoe",
-            "title": "Liquida videre solus"
-        },
-        {
-            "location": "/about/#fumantiaque-aderit-aenea-nova-verba",
-            "text": "Habet adhuc. Pingebat in  dempta  habebat Alcathoen, habet tenet  rigore .  Abire se pelagoque extulerat sine patet et exarsit percussus oscula petitam,\ncurat bacchantum suaque pro. Ubi poenaededidit aevo deum comites: paretur arce,\nfuroribus, membris illuc? Remorata ab anxius Iovem. Tecum amor submota et\nvolucres, quae  atria amplectitur  vel! Haec notitiam inplevit luminis mortisque\nquisquis et questa filis possedit  coeperunt .  Carinam  petit ulla  est legem alimentaque\namnis; o vertit dictis laetus occasus traxit? Aulaea necopina deos venenum\nignarus serpentis, fame plena reddidit dici Arethusa an molles aequor tempora\nTalibus undae. Repagula nullis. Quique modo non Philemon; erat versuta,\nsepulcrum.",
-            "title": "Fumantiaque aderit Aenea nova verba"
         }
     ]
 }

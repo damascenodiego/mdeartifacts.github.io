@@ -12,6 +12,6 @@ This project is organized as follows:
 
 * [`The 5w2h method`](/intro5w2h) - A simple but useful framework for artifact authoring and reviewing.
 * [`Guidelines for MDE artifact sharing`](/guidelines) - List of research best practices for MDE artifact sharing.
-* [`Related work`](relwork) - List of research/case studies associated with this project.
+* [`Associated studies`](relwork) - List of research/case studies associated with this project.
 * [`FAQ`](faq/) - List "*F*actually" *A*sked *Q*uestions about our project.
 
