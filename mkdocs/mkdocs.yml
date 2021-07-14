@@ -1,9 +1,10 @@
 site_name: MDE Artifacts
 site_url: https://mdeartifacts.github.io/
-pages:
+nav:
     - Home: index.md
     - The 5w2h method: intro5w2h.md
     - Guidelines for MDE artifacts: guidelines.md
     - Associated studies: relwork.md
-    - FAQ: faq.md
-theme: readthedocs
+    - Contact us: contactus.md
+theme:
+    name: 'mkdocs'

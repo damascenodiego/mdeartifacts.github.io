@@ -10,8 +10,7 @@ address those respective factual question (i.e., quality concerns).
 
 This project is organized as follows:
 
-* [`The 5w2h method`](/intro5w2h) - A simple but useful framework for artifact authoring and reviewing.
+* [`The 5w2h method`](/intro5w2h) - An introduction to the 5w2h method, a simple but useful framework for artifact authoring and reviewing.
 * [`Guidelines for MDE artifact sharing`](/guidelines) - List of research best practices for MDE artifact sharing.
 * [`Associated studies`](relwork) - List of research/case studies associated with this project.
-* [`FAQ`](faq/) - List "*F*actually" *A*sked *Q*uestions about our project.
 
