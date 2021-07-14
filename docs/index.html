@@ -7,14 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="None">
   
-  <link rel="canonical" href="https://mdeartifacts.github.io/">
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <title>MDE Artifacts</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - MDE Artifacts</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="css/theme.css" />
-  <link rel="stylesheet" href="css/theme_extra.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
   
   <script>
     // Current page data
@@ -23,10 +22,10 @@
     var mkdocs_page_url = "/";
   </script>
   
-  <script src="js/jquery-2.1.1.min.js" defer></script>
-  <script src="js/modernizr-2.8.3.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
 </head>
 
 <body class="wy-body-for-nav" role="document">
@@ -35,37 +34,64 @@
 
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
         <a href="." class="icon icon-home"> MDE Artifacts</a>
         <div role="search">
   <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+    <input type="text" name="q" placeholder="Search docs" />
   </form>
 </div>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-                <ul class="current">
-                    <li class="toctree-l1 current"><a class="reference internal current" href=".">Home</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
-    </li>
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#mde-artifacts">MDE Artifacts</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#project-layout">Project layout</a></li>
+        
+        </ul>
+    
+
     </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="about/">Guidelines</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="5w2h/">About</a>
-                    </li>
-                </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="intro5w2h/">The 5w2h method</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="guidelines/">Guidelines</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="relwork/">Related Work</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="faq/">FAQ</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="about/">ABOUT</a>
+	    </li>
+          
+        </ul>
       </div>
-    </div>
+      &nbsp;
     </nav>
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
@@ -90,28 +116,25 @@
       
     </li>
   </ul>
-  
   <hr/>
 </div>
-
           <div role="main">
             <div class="section">
               
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
-</ul>
+                <h1 id="mde-artifacts">MDE Artifacts</h1>
+<p>The <em>MDE Artifacts</em> project introduces a set of guidelines for artifact sharing specifically tailored to MDE research.
+These guidelines are structured as a <em>list of factual questions</em> that cover quality concerns which
+artifact authors, reviewers and Artifact Evaluation Committees (AEC) may ask about a research artifact.
+For each factual question, we also present a list of research best practices that can be used to
+address those respective factual question (i.e., quality concerns).</p>
 <h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<p>This project is organized as follows:</p>
+<ul>
+<li><a href="./intro5w2h"><code>The 5w2h method</code></a> - A simple but useful framework for artifact authoring and reviewing.</li>
+<li><a href="./guidelines"><code>Guidelines for MDE artifact sharing</code></a> - List of research best practices for MDE artifact sharing.</li>
+<li><a href="./relwork"><code>Related work</code></a> - List of research/case studies associated with this project.</li>
+<li><a href="./faq/"><code>FAQ</code></a> - List "<em>F</em>actually" <em>A</em>sked <em>Q</em>uestions about our project.</li>
+</ul>
               
             </div>
           </div>
@@ -119,7 +142,7 @@ docs/
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="about/" class="btn btn-neutral float-right" title="Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="intro5w2h/" class="btn btn-neutral float-right" title="The 5w2h method">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -132,39 +155,31 @@ docs/
     
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
-      
+	  
         </div>
       </div>
 
     </section>
-
+    
   </div>
 
-  <div class="rst-versions" role="note" aria-label="versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-    
-      <span><a href="about/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+        <span style="margin-left: 15px"><a href="intro5w2h/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
 </div>
-    <script>var base_url = '.';</script>
-    <script src="js/theme_extra.js" defer></script>
-    <script src="js/theme.js" defer></script>
-      <script src="search/main.js" defer></script>
-    <script defer>
-        window.onload = function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        };
-    </script>
+    <script src="./js/theme.js"></script>
 
 </body>
 </html>
 
 <!--
-MkDocs version : 1.2.1
-Build Date UTC : 2021-07-13 08:52:14.873511+00:00
+MkDocs version : 0.16.3
+Build Date UTC : 2021-07-14 14:45:42
 -->
