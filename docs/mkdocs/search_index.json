@@ -27,13 +27,13 @@
         },
         {
             "location": "/relwork/",
-            "text": "Damasceno & Str\u00fcber (2021)\n\n\n\n\nFull paper: \"\nQuality Guidelines for Research Artifacts in Model-Driven Engineering\n.\"\n\n\nVenue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems\n\n\nTrack: Foundations track\n\n\nYear: 2021.\n\n\n\n\nResearch artifact\n:\nThe research artifact associated with this paper is available on\n\nGitHub @ damascenodiego/mdeartifacts.github.io\n\n. This folder is organized as follows:\n\n\n      artifacts/202107_models/analysis/ # Rscripts to analyze our survey results\n          img/                          # Plots generated from the analysis\n      artifacts/202107_models/data/ # Data collected during the questionnaire \n          01_practices_extracted/   # Docx files with the 280 research practices extracted\n          02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H \n          03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)\n          04_guidelines_survey/     # Survey snapshot, and Anonymized results\n\n\n\nxxx & yyy (2022)",
+            "text": "Damasceno, C.D.N. & Str\u00fcber, D. (2021)\n\n\n\n\nFull paper: \"\nQuality Guidelines for Research Artifacts in Model-Driven Engineering\n.\"\n\n\nVenue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems\n\n\nTrack: Foundations track\n\n\nYear: 2021\n\n\n\n\nResearch artifact:\n\n\n\n\n\n\nZenodo: \n\n\n\n\nGitHub: \ndamascenodiego/mdeartifacts.github.io\n\n\n\n\nxxx & yyy (2022)",
             "title": "Associated studies"
         },
         {
-            "location": "/relwork/#damasceno-struber-2021",
-            "text": "Full paper: \" Quality Guidelines for Research Artifacts in Model-Driven Engineering .\"  Venue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems  Track: Foundations track  Year: 2021.   Research artifact :\nThe research artifact associated with this paper is available on GitHub @ damascenodiego/mdeartifacts.github.io \n. This folder is organized as follows:        artifacts/202107_models/analysis/ # Rscripts to analyze our survey results\n          img/                          # Plots generated from the analysis\n      artifacts/202107_models/data/ # Data collected during the questionnaire \n          01_practices_extracted/   # Docx files with the 280 research practices extracted\n          02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H \n          03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)\n          04_guidelines_survey/     # Survey snapshot, and Anonymized results",
-            "title": "Damasceno &amp; Str\u00fcber (2021)"
+            "location": "/relwork/#damasceno-cdn-struber-d-2021",
+            "text": "Full paper: \" Quality Guidelines for Research Artifacts in Model-Driven Engineering .\"  Venue: MoDELS'21: ACM/IEEE 24th International Conference on Model Driven Engineering Languages and Systems  Track: Foundations track  Year: 2021   Research artifact:    Zenodo:    GitHub:  damascenodiego/mdeartifacts.github.io",
+            "title": "Damasceno, C.D.N. &amp; Str\u00fcber, D. (2021)"
         },
         {
             "location": "/relwork/#xxx-yyy-2022",
