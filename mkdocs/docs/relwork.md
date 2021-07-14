@@ -7,10 +7,10 @@
 * Track: Foundations track
 * Year: 2021
 * Research artifact:
-    - Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5094439.svg)](https://doi.org/10.5281/zenodo.5094439)
+    - Zenodo: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5103952.svg)](https://doi.org/10.5281/zenodo.5103952)
     - GitHub: [damascenodiego/mdeartifacts.github.io](https://github.com/damascenodiego/mdeartifacts.github.io/tree/main/artifacts/202107_models)
 
-# xxx & yyy (2022)
+
 
 
 
