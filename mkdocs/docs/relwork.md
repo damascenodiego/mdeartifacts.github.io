@@ -16,6 +16,5 @@ This paper also has a research artifact which is versioned on GitHub and archive
 For more information, visit one of the links below.
 
 - [MoDELS'21 Artifacts @ GitHub](https://github.com/damascenodiego/mdeartifacts.github.io/tree/main/artifacts/202107_models)
-- [MoDELS'21 Artifacts @ Zenodo: ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5103952.svg)](https://doi.org/10.5281/zenodo.5103952)
+- [MoDELS'21 Artifacts @ Zenodo: ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5094439.svg)](https://doi.org/10.5281/zenodo.5094439)
 
-[comment]: <> (## xxx and yyy zzzz)
