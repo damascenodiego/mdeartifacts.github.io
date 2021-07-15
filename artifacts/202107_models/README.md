@@ -25,7 +25,7 @@ This artifact is hosted at the [damascenodiego/mdeartifacts.github.io](https://g
 This repository is also archived on Zenodo that issued a DOI for our MoDELS'21 paper artifact:
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5094439.svg)](https://doi.org/10.5281/zenodo.5094439)
 
-## GitHub (fork repository for hosting the website)
+## GitHub fork (website hosting)
 
 There is a fork of this same repository which we maintain **only for the purpose of hosting the MDE Artifacts website** 
 at the URL [https://mdeartifacts.github.io/](https://mdeartifacts.github.io/).
@@ -93,7 +93,7 @@ The hardware settings used in this study were:
     **Processor**:	  Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz 
 
 
-# What are some useful references?
+# Useful references
 
 - N. R. Tague, **The quality toolbox**, 2nd ed. Milwaukee, Wis: ASQ Quality Press, 2005.
 - Project Management Institute, Ed., **A guide to the project management body of knowledge
