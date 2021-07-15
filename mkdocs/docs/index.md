@@ -6,11 +6,16 @@ artifact authors, reviewers and Artifact Evaluation Committees (AEC) may ask abo
 For each factual question, we also present a list of research best practices that can be used to
 address those respective factual question (i.e., quality concerns).
 
+
+<p style="text-align:center">
+    <img src="images/5w2h.png" alt>
+    <em>The 5w2h questions for artifact authoring and sharing in MDE Research</em>
+</p>
+
 ## Project layout
 
 This project is organized as follows:
 
 * [`The 5w2h method`](/intro5w2h) - An introduction to the 5w2h method, a simple but useful framework for artifact authoring and reviewing.
 * [`Guidelines for MDE artifact sharing`](/guidelines) - List of research best practices for MDE artifact sharing.
-* [`Associated studies`](relwork) - List of research/case studies associated with this project.
-
+* [`Derived Papers and Artifacts`](relwork) - Lists of assets derived from this project.

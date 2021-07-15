@@ -9,9 +9,9 @@ Quality measures and techniques are specific to the type of artifact being produ
 and documenting means that a project shall demonstrate compliance with such quality requirements and/or standards. 
 Failure to identify and meet quality requirements can have serious negative consequences for project stakeholders.
 In order to understand the concept of quality within the context of a specific project, there is an extensive toolbox of methods 
-from which the 5w2h method constitutes a simple but powerful framework for research planning, analysis, or reviewing.
+from which the **5w2h method** constitutes a simple but powerful framework for research planning, analysis, or reviewing.
 
-# The Origin
+# The Five Ws and Two Hs 
 
 The term "5w2h" is an abbreviation of seven keywords: 
 **W**hat, **W**here, **W**hy, **W**ho, **W**hen, **H**ow, and **H**ow Much.

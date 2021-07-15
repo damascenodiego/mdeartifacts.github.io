@@ -44,17 +44,17 @@ To the interested reader, we recommend the following references:
 
 Particularly, we recommend looking at: 
 
-* **Section 5.30) 5W2H**, which provides a description of the method we used to categorize research practices.
-* **Section 5.43) Mind Map**, which provides a description of the method we used to organize and label our research practices.
+> **Section 5.30) 5W2H**, which provides a description of the method we used to categorize research practices.
+> **Section 5.43) Mind Map**, which provides a description of the method we used to organize and label our research practices.
 
 
 - Project Management Institute, Ed., A guide to the project management body of knowledge 
   / Project Management Institute, Sixth edition. Newtown Square, PA: 
   Project Management Institute, 2017.
 
-> Particularly, we recommend looking at:
+Particularly, we recommend looking at:
 
-* **Section 8.1) Plan Quality Management**, which describes some of theconcepts that guided our methodology.
+> **Section 8.1) Plan Quality Management**, which describes some of theconcepts that guided our methodology.
 
 ## Who?
 ### Who could use it?
@@ -106,6 +106,8 @@ This folder is organized as follows:
 
 ### How to set up a running environment?
 
+This artifact includes a few RScripts which can be run to reproduce our analysis 
+and regenerate our figures.
 To setup a running environment, you will need the R Statistical package v4.0.5.
 More details about our environment are indicated in 
 question _How many resources does it need?_
@@ -140,20 +142,20 @@ For the survey, we used the [Google Forms platform](https://www.google.com/forms
 For the statistical analysis, we used the following version of the R Statistical Package:
 
 
-* **platform**:       x86_64-w64-mingw32          
-* **arch**:           x86_64                      
-* **os**:             mingw32                     
-* **version.string**: R version 4.0.5 (2021-03-31)
+    **platform**:       x86_64-w64-mingw32          
+    **arch**:           x86_64                      
+    **os**:             mingw32                     
+    **version.string**: R version 4.0.5 (2021-03-31)
 
 The R statistical package was run using the RStudio IDE Version 1.4.1106
 
 The hardware settings were:
 
-* **OS Name**:	Microsoft Windows 10 Pro
-* **Version**:	10.0.19042 Build 19042
-* **System Type**:	x64-based PC
-* **Processor**:	Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz, 2304 Mhz, 4 Core(s), 8 Logical Processor(s)
 
+    **OS Name**:	  Microsoft Windows 10 Pro 
+    **Version**:	  10.0.19042 Build 19042 
+    **System Type**:  x64-based PC 
+    **Processor**:	  Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz 
 
 
 [^1]: https://conf.researchr.org/track/models-2021/models-2021-technical-papers#Foundations-Track
