@@ -18,3 +18,14 @@ For more information, visit one of the links below.
 - [MoDELS'21 Artifacts @ GitHub](https://github.com/damascenodiego/mdeartifacts.github.io/tree/main/artifacts/202107_models)
 - [MoDELS'21 Artifacts @ Zenodo: ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5094439.svg)](https://doi.org/10.5281/zenodo.5094439)
 
+# Related Work
+
+## N. R. Tague (2005)
+
+- N. R. Tague, **The quality toolbox**, 2nd ed. Milwaukee, Wis: ASQ Quality Press, 2005.
+
+## PMBOK (2017)
+
+- Project Management Institute, Ed., **A guide to the project management body of knowledge
+  / Project Management Institute** (PMBOK/PMI), Sixth edition. Newtown Square, PA:
+  PMI, 2017.
