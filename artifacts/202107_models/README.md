@@ -43,6 +43,10 @@ for the participants' role, challenges faced by MDE experts,
 overall satisfaction of our respondents,
 and plots for the top-priority practices.
 
+To open the mind maps available in the _.mm_ format, we recommend the use of the
+[FreePlane Mind Mapping tool](https://www.freeplane.org/wiki/index.php/Home), which
+can be installed on Windows and Linux. 
+
 Below, we depict an overall structure of this artifact.
 
           analysis/ # Rscripts to analyze our survey results
