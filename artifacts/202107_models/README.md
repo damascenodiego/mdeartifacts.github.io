@@ -23,7 +23,7 @@ This artifact is hosted at the [damascenodiego/mdeartifacts.github.io](https://g
 
 ## Zenodo
 This repository is also archived on Zenodo that issued a DOI for our MoDELS'21 paper artifact:
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5094439.svg)](https://doi.org/10.5281/zenodo.5094439)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5106002.svg)](https://doi.org/10.5281/zenodo.5106002)
 
 ## GitHub fork (website hosting)
 

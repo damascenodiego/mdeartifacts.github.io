@@ -35,7 +35,7 @@ archived for long-term availability on Zenodo.
 
 To cite this artifact version, please visit the link below:
 
-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5094439.svg)](https://doi.org/10.5281/zenodo.5094439)
+- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5106002.svg)](https://doi.org/10.5281/zenodo.5106002)
 
 ### Where to find related work?
 The list of related work is available in the last page of the article.
