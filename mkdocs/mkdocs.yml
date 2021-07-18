@@ -20,11 +20,6 @@ theme:
     features:
         - navigation.tabs
         - navigation.tabs.sticky
-        - navigation.instant
-        - navigation.tracking
-        - navigation.sections
-        - navigation.top
-        - toc.integrate
 extra:
     analytics:
         provider: google
