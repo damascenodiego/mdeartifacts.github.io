@@ -1,6 +1,6 @@
 # MDE Artifacts
 
-The *MDE Artifacts* project introduces a set of guidelines for artifact sharing specifically tailored to MDE research.
+The *MDE Artifacts* project introduces a set of guidelines for artifact sharing specifically tailored to Model-Driven Engineering (MDE) research.
 These guidelines are structured as a *list of factual questions* that cover quality concerns which
 artifact authors, reviewers and Artifact Evaluation Committees (AEC) may ask about a research artifact.
 For each factual question, we also present a list of research best practices that can be used to
