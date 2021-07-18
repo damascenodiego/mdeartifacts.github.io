@@ -3,8 +3,31 @@ site_url: https://mdeartifacts.github.io/
 nav:
     - Home: index.md
     - The 5w2h: intro5w2h.md
-    - Guidelines for MDE artifacts: guidelines.md
+    - The Guidelines: guidelines.md
     - Related Work: relwork.md
     - Contact us: contactus.md
 theme:
-    name: 'cinder'
+    name: 'material'
+    palette:
+        - scheme: default
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - scheme: slate
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+    features:
+        - navigation.tabs
+        - navigation.tabs.sticky
+        - navigation.instant
+        - navigation.tracking
+        - navigation.sections
+        - navigation.top
+        - toc.integrate
+extra:
+    analytics:
+        provider: google
+        property: G-9JGX4HPRGK
+copyright: Copyright &copy; 2021 Damasceno and Struber
+repo_url: https://github.com/damascenodiego/mdeartifacts.github.io
