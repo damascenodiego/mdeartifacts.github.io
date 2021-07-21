@@ -7,6 +7,17 @@ _Quality Guidelines for Research Artifacts in Model-Driven Engineering_.
 This article has been accepted the Foundations Track of the 
 MODELS'21 conference as a Technical paper[^1].
 
+Below, we depict an overall structure of this artifact.
+
+          analysis/ # Rscripts to analyze our survey results
+              img/                          # Plots generated from the analysis
+          data/ # Data collected during the questionnaire 
+              01_practices_extracted/   # Docx files with the 280 research practices extracted
+              02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H 
+              03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)
+              04_guidelines_survey/     # Survey snapshot, and Anonymized results
+
+
 #  What this artifact does?
 
 In this artifact, you will find: 
@@ -15,6 +26,7 @@ In this artifact, you will find:
 (3) Our guidelines, which include the 19 factual questions and 84 best practices specifically tailored to MDE research projects;
 (4) Our Survey results (Between April-May 2021) and R scripts for analyzing our responses and drawing plots.
  
+
 # Where it can be obtained?
 
 ## GitHub (main repository)
@@ -32,30 +44,25 @@ at the URL [https://mdeartifacts.github.io/](https://mdeartifacts.github.io/).
 
 # How to replicate the results of this work?
 
-To reproduce this work, we recommend you look at the text documents and mind maps available in 
-our [data/](data/) folder. 
+A successful replication/reproduction of our work entails the following:
+(1) Curation of research practices common to a given research community;
+(2) Classification of practices according to the 5w2h method;
+(3) Refinement of practices (e.g., remove redundancy, addition of missing practices);
+(4) Repeating the survey among experts in the research community and the analysis of responses. 
+To design your own replication/reproduction, we recommend the interested reader to look at the files available in 
+the [data/](data/) and [analysis/](analysis/) directories. 
 There you will find the docx files and mind maps with the practices and understand
 how we organized our study.
 
-To support the analysis of the survey results, we also provide a set of RScripts and 
-an RStudio project where the interested researcher can generate the plots 
-for the participants' role, challenges faced by MDE experts,
-overall satisfaction of our respondents,
-and plots for the top-priority practices.
+In the directory [data/](data/),
+you will find the _.docx_ files and mind maps in _.mm_ format with the practices and see how those could be organized.
+To open the mind maps in _.mm_ format, we recommend the [FreePlane Mind Mapping tool](https://www.freeplane.org/).
 
-To open the mind maps available in the _.mm_ format, we recommend the use of the
-[FreePlane Mind Mapping tool](https://www.freeplane.org/wiki/index.php/Home), which
-can be installed on Windows and Linux. 
-
-Below, we depict an overall structure of this artifact.
-
-          analysis/ # Rscripts to analyze our survey results
-              img/                          # Plots generated from the analysis
-          data/ # Data collected during the questionnaire 
-              01_practices_extracted/   # Docx files with the 280 research practices extracted
-              02_practices_labelling/   # Mind maps with the practices categorized using the 5W2H 
-              03_guidelines_design/     # Our guidelines (19 factual questions + 84 best practices)
-              04_guidelines_survey/     # Survey snapshot, and Anonymized results
+In the directory [analysis/](analysis/),
+we also provide a set of [RScripts](https://www.r-project.org/) and an 
+[RStudio project](https://rstudio.com/products/rstudio/download/) for reproducing the plots shown in the paper, 
+e.g., participants' role, challenges faced by MDE experts,
+overall satisfaction of participants, top-priority practices.
 
 ## How to run the analysis of results?
 
