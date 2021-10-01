@@ -11,10 +11,10 @@ multi-criteria prioritization principles for ranking research practices.
 * Venue: OpenScienSE'21: 1st Workshop on Open Science Practices for Software Engineering (OpenScienSE)
 * Type: Emerging Results Paper
 
-This paper also has a research artifact which is versioned on GitHub and archived on Zenodo.
+This paper openly available on Zenodo and in the SBC-OpenLib.
 For more information, visit one of the links below.
 
-- OpenScienSE'21 Paper @ [Zenodo](https://doi.org/10.5281/zenodo.5109401), [SOL-SBC](https://doi.org/10.5753/opensciense.2021.17137)
+- OpenScienSE'21 Paper @ [Zenodo](https://doi.org/10.5281/zenodo.5109401), [SBC-OpenLib](https://doi.org/10.5753/opensciense.2021.17137)
 
 ## Damasceno and Strüber (2021)
 
