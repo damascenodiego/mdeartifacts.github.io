@@ -14,7 +14,8 @@ multi-criteria prioritization principles for ranking research practices.
 This paper openly available on Zenodo and in the SBC-OpenLib.
 For more information, visit one of the links below.
 
-- OpenScienSE'21 Paper @ [Zenodo](https://doi.org/10.5281/zenodo.5109401), [SBC-OpenLib](https://doi.org/10.5753/opensciense.2021.17137)
+- OpenScienSE'21 Paper @ [Zenodo: ![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5384797.svg)](https://doi.org/10.5281/zenodo.5384797)
+- OpenScienSE'21 Paper @ [arXiv](https://arxiv.org/abs/2109.02304), [SBC-OpenLib](https://doi.org/10.5753/opensciense.2021.17137)
 
 ## Damasceno and Strüber (2021)
 
