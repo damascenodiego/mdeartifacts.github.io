@@ -28,3 +28,19 @@ This project is organized in the following sections:
 * [`Guidelines for MDE artifact sharing`](/guidelines) - List of research best practices for MDE artifact sharing.
 * [`Derived Papers and Artifacts`](relwork) - Lists of assets derived from this project.
 * [`Contact us`](contactus) - Information for contacting the authors of these guidelines.
+
+# How to cite this website?
+
+To cite this website, we recommend using the BibTex reference below.
+
+```
+@inproceedings{dd2021_mdeartifact,
+   title = {Quality {Guidelines} for {Research} {Artifacts} in {Model}-{Driven} {Engineering}},
+   booktitle = {Proceedings of the {ACM}/{IEEE} 24th {International} {Conference} on {Model} {Driven} {Engineering} {Languages} and {Systems} ({MoDELS}'21)},
+   publisher = {ACM},
+   author = {Damasceno, Carlos Diego Nascimento and Strüber, Daniel},
+   address = {Fukuoka, Japan (Virtual Event)},
+   month = aug,
+   year = {2021},
+}
+```

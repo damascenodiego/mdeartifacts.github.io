@@ -28,7 +28,23 @@ For more information or collaborations, feel free to contact:
 * Daniel Strüber  <d.strueber  (at) cs (dot) ru (dot) nl>
 
 
-# How to contribute
+# How to contribute?
 
 Our project is open for collaborations and contributions. 
 Drop us a message! :)
+
+# How to cite?
+
+To cite this project, we recommend using the BibTex reference below.
+
+```
+@inproceedings{dd2021_mdeartifact,
+   title = {Quality {Guidelines} for {Research} {Artifacts} in {Model}-{Driven} {Engineering}},
+   booktitle = {Proceedings of the {ACM}/{IEEE} 24th {International} {Conference} on {Model} {Driven} {Engineering} {Languages} and {Systems} ({MoDELS}'21)},
+   publisher = {ACM},
+   author = {Damasceno, Carlos Diego Nascimento and Strüber, Daniel},
+   address = {Fukuoka, Japan (Virtual Event)},
+   month = aug,
+   year = {2021},
+}
+```
